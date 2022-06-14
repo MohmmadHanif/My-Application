@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".DemoOOPS.Polymorphisum">
+
+
+    <TextView
+        android:id="@+id/Polymorphisum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Polymorphisum"
+        android:textColor="@color/black"
+        android:textSize="30dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:textColor="@color/black"
+        android:id="@+id/edit1"
+        android:layout_below="@id/Polymorphisum"
+        android:hint="Enter Number"
+        android:textColorHint="@color/black"
+        android:layout_margin="30dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:textColor="@color/black"
+        android:id="@+id/edit2"
+        android:layout_below="@id/edit1"
+        android:hint="Enter Number"
+        android:textColorHint="@color/black"
+        android:layout_margin="30dp"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_margin="40dp"
+        android:layout_below="@+id/edit2"
+        android:text="Click"/>
+
+
+    <TextView
+        android:id="@+id/hello"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        />
+
+</RelativeLayout>
