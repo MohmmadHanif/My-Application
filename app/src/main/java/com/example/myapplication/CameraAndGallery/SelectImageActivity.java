@@ -19,7 +19,6 @@ import com.example.myapplication.R;
 public class SelectImageActivity extends AppCompatActivity {
 
     static final int REQUEST_IMAGE_CAPTURE = 1;
-    private static final int pic_id = 123;
     ImageView SelectImage;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,22 +31,19 @@ public class SelectImageActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent camera_intent
-                        = new Intent(MediaStore
-                        .ACTION_IMAGE_CAPTURE);
-
-               try {
-                   startActivityForResult(camera_intent, REQUEST_IMAGE_CAPTURE);
-                   Log.i("Camera","Task is Done");
-               }catch (ActivityNotFoundException e){
-                   Log.e("Error",e.getLocalizedMessage());
-               }
-
+               Intent camera_intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                try {
+                    startActivityForResult(camera_intent, REQUEST_IMAGE_CAPTURE);
+                } catch (ActivityNotFoundException e) {
+                    Log.e("Error",e.getLocalizedMessage());
+                }
+               //startActivityForResult(camera_intent,REQUEST_IMAGE_CAPTURE);
             }
         });
 
 
     }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -58,4 +54,5 @@ public class SelectImageActivity extends AppCompatActivity {
             SelectImage.setImageBitmap(imageBitmap);
         }
     }
+
 }
