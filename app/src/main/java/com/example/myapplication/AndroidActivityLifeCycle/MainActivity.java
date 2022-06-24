@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.AndroidActivityLifeCycle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,9 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.TextView;
 
-import com.example.myapplication.DemoOOPS.Encapsulation;
+import com.example.myapplication.R;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -23,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this,A2.class));
+                startActivity(new Intent(MainActivity.this, A2.class));
             }
         });
 

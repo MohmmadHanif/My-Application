@@ -7,11 +7,9 @@ import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 
 import com.example.myapplication.R;
@@ -19,6 +17,7 @@ import com.example.myapplication.R;
 public class SelectImageActivity extends AppCompatActivity {
 
     static final int REQUEST_IMAGE_CAPTURE = 1;
+
     ImageView SelectImage;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +51,10 @@ public class SelectImageActivity extends AppCompatActivity {
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
             SelectImage.setImageBitmap(imageBitmap);
+            Intent intent = new Intent();
+            intent.putExtra("data",data.getExtras());
+            setResult(2,intent);
+            finish();
         }
     }
 

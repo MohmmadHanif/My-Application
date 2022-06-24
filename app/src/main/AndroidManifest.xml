@@ -3,8 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.myapplication">
 
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-feature android:name="android.hardware.camera" android:required="true" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -16,13 +24,33 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
-            android:name=".CameraAndGallery.SelectImageActivity"
+            android:name=".ConstraintLayouAndRecycleview.ProductFilterActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".Fregment.Fregment_lifecycle"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".CameraAndGallery.ShowImageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Task.secondActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CameraAndGallery.SelectImageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ConstraintLayouAndRecycleview.ProductListActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AndroidActivityLifeCycle.MainActivity"
             android:exported="false" />
         <activity
             android:name=".DemoOOPS.Polymorphisum"
@@ -32,18 +60,16 @@
             android:exported="false"
             tools:ignore="MissingClass" />
         <activity
-            android:name=".A2"
+            android:name=".AndroidActivityLifeCycle.A2"
             android:exported="false"
             tools:ignore="MissingClass" />
         <activity
-            android:name=".CameraAndGallery.ShowImageActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:name=".Task.firstActivity"
+            android:exported="false" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

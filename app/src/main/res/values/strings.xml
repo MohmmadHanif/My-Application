@@ -2,4 +2,15 @@
     <string name="app_name">My Application</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sort_and_filter">Sort and Filter</string>
+    <string name="sort_by">Sort By</string>
+    <string name="_20_products_found">20 Products found</string>
+    <string name="_500gm">500gm</string>
+    <string name="apple_best_of_himalaya_s">Apple- Best of Himalaya\'s</string>
+    <string name="rs_300">RS 300</string>
+    <string name="_169_5">169.5</string>
+    <string name="add">+ add</string>
+    <string name="_20">20</string>
+    <string name="standard_delivery_tomorrow_evening">Standard Delivery (Tomorrow Evening)</string>
+    <string name="any">Any</string>
 </resources>
