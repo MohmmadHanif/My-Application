@@ -53,10 +53,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:text="@string/apple_best_of_himalaya_s"
-            android:maxLines="2"
             android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="@string/apple_best_of_himalaya_s"
             android:textColor="@color/black"
             android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/oldPrice"
@@ -72,10 +72,9 @@
             android:background="@drawable/line"
             android:text="@string/rs_300"
             android:textColor="@color/black"
-            app:layout_constraintEnd_toStartOf="@+id/newPrice"
-            app:layout_constraintStart_toStartOf="@id/consAddProduct"
             app:layout_constraintBottom_toTopOf="@+id/consAddProduct"
-            />
+            app:layout_constraintEnd_toStartOf="@+id/newPrice"
+            app:layout_constraintStart_toStartOf="@id/consAddProduct" />
 
 
         <com.google.android.material.textview.MaterialTextView
@@ -86,11 +85,10 @@
             android:text="@string/_169_5"
             android:textColor="@color/black"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/oldPrice"
+            app:layout_constraintBottom_toTopOf="@+id/consAddProduct"
             app:layout_constraintEnd_toEndOf="@+id/consAddProduct"
             app:layout_constraintLeft_toRightOf="@id/oldPrice"
-            app:layout_constraintBottom_toTopOf="@+id/consAddProduct"
-             />
+            app:layout_constraintStart_toEndOf="@+id/oldPrice" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/consAddProduct"
@@ -99,8 +97,7 @@
             android:orientation="vertical"
             app:layout_constraintBottom_toTopOf="@+id/productDeliveryStatus"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            >
+            app:layout_constraintStart_toStartOf="parent">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/AddProductBtn"
@@ -112,6 +109,7 @@
                 android:background="@drawable/roundedbutton"
                 android:text="@string/add"
                 android:textSize="12sp"
+                app:backgroundTint="@null"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -124,7 +122,6 @@
                 android:layout_margin="5dp"
                 android:layout_marginTop="4dp"
                 android:layout_marginEnd="20dp"
-
                 android:src="@drawable/minus"
                 android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="parent"

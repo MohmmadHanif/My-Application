@@ -1,4 +1,4 @@
-package com.example.myapplication.ConstraintLayouAndRecycleview;
+package com.example.myapplication.ConstraintLayoutAndRecycleView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
@@ -10,8 +10,8 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.myapplication.ConstraintLayouAndRecycleview.Adapters.productAdapter;
-import com.example.myapplication.ConstraintLayouAndRecycleview.Modals.productModalClass;
+import com.example.myapplication.ConstraintLayoutAndRecycleView.Adapters.productAdapter;
+import com.example.myapplication.ConstraintLayoutAndRecycleView.Modals.productModalClass;
 import com.example.myapplication.R;
 
 import java.util.ArrayList;
@@ -32,13 +32,9 @@ public class ProductListActivity extends AppCompatActivity {
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
         productRecyclerView = findViewById(R.id.recycleView);
+        totalProduct = findViewById(R.id.totalProduct);
         filterImage = findViewById(R.id.filterImage);
         productList = new ArrayList<>();
-        adapter = new productAdapter(this, productList);
-        totalProduct = findViewById(R.id.totalProduct);
-
-        //productRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        productRecyclerView.setAdapter(adapter);
 
         filterImage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,8 +84,10 @@ public class ProductListActivity extends AppCompatActivity {
         productList.add(new productModalClass("Rs" + "30", "23", "1 KG", "Banana- Best of Himalaya's", "Express Delivery  (Tomorrow Evening)", R.drawable.veg, R.drawable.banana, "veg"));
         productList.add(new productModalClass("Rs" + "110", "90", "100 G", "Amul- Butter", "Standard Delivery  (Tomorrow Evening)", R.drawable.veg, R.drawable.butter, "veg"));
 
-
         totalProduct.setText(productList.size() + " Products found");
+
+        adapter = new productAdapter(this, productList);
+        productRecyclerView.setAdapter(adapter);
 
 
     }

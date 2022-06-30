@@ -1,6 +1,7 @@
-package com.example.myapplication.ConstraintLayouAndRecycleview.Adapters;
+package com.example.myapplication.ConstraintLayoutAndRecycleView.Adapters;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,7 +10,7 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.myapplication.ConstraintLayouAndRecycleview.Modals.productModalClass;
+import com.example.myapplication.ConstraintLayoutAndRecycleView.Modals.productModalClass;
 import com.example.myapplication.R;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textview.MaterialTextView;
@@ -19,7 +20,6 @@ import java.util.List;
 public class productAdapter extends RecyclerView.Adapter<productAdapter.viewHolder> {
     Context context;
     List<productModalClass> productList;
-    int count = 0;
 
     public productAdapter(Context context, List<productModalClass> productList) {
         this.context = context;
@@ -33,10 +33,18 @@ public class productAdapter extends RecyclerView.Adapter<productAdapter.viewHold
         return new viewHolder(view);
     }
 
+
     @Override
     public void onBindViewHolder(@NonNull viewHolder holder, int position) {
 
         productModalClass modalClass = productList.get(position);
+
+        if (modalClass.getCheckPotion()) {
+            enableView(holder);
+        } else {
+            disableView(holder);
+        }
+
         holder.vegOrNonVeg.setImageResource(modalClass.getVegOrNonVegImage());
         holder.productImage.setImageResource(modalClass.getProductImage());
         holder.productName.setText(modalClass.getProductName());
@@ -44,45 +52,47 @@ public class productAdapter extends RecyclerView.Adapter<productAdapter.viewHold
         holder.productOldPrice.setText(modalClass.getOldPrice());
         holder.productNewPrice.setText(modalClass.getNewPrice());
         holder.productStatus.setText(modalClass.getProductDeliveryStatus());
-        holder.productAddItemCounts.setText(String.valueOf(count));
-
-        //Add Btn
-        holder.AddProductBtn.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-                holder.AddProductBtn.setVisibility(View.GONE);
-                holder.minus.setVisibility(View.VISIBLE);
-                holder.plus.setVisibility(View.VISIBLE);
-                holder.productAddItemCounts.setVisibility(View.VISIBLE);
+        holder.productAddItemCounts.setText(String.valueOf(modalClass.getCurrentCount()));
 
 
-            }
-        });
-        //Plus
-        holder.plus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                count++;
-                holder.productAddItemCounts.setText(String.valueOf(count));
-            }
-        });
-        //Minus
-        holder.minus.setOnClickListener(new View.OnClickListener() {
+        //minus  and plus
+        /*holder.minus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-               if (count <= 0) {
-
+                if (modalClass.getCurrentCount() <= 1) {
+                    holder.addProductBtn.setVisibility(View.VISIBLE);
+                    modalClass.setCheckPotion(false);
                 } else {
-                    count--;
-                    holder.productAddItemCounts.setText(String.valueOf(count));
+                    modalClass.setCurrentCount(modalClass.getCurrentCount() - 1);
+                    notifyDataSetChanged();
                 }
 
             }
         });
 
+        holder.plus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                modalClass.setCurrentCount(modalClass.getCurrentCount() + 1);
+                notifyItemChanged(holder.getAdapterPosition());
+            }
+        });*/
+
     }
+
+    public void enableView(viewHolder holder) {
+        holder.addProductBtn.setVisibility(View.GONE);
+        holder.minus.setVisibility(View.VISIBLE);
+        holder.plus.setVisibility(View.VISIBLE);
+        holder.productAddItemCounts.setVisibility(View.VISIBLE);
+    }
+
+    public void disableView(viewHolder holder) {
+        holder.addProductBtn.setVisibility(View.VISIBLE);
+    }
+
 
     @Override
     public int getItemCount() {
@@ -92,7 +102,7 @@ public class productAdapter extends RecyclerView.Adapter<productAdapter.viewHold
     public class viewHolder extends RecyclerView.ViewHolder {
         ImageView vegOrNonVeg, productImage, plus, minus;
         MaterialTextView productQuantity, productName, productOldPrice, productNewPrice, productStatus, productAddItemCounts;
-        MaterialButton AddProductBtn;
+        MaterialButton addProductBtn;
 
         public viewHolder(@NonNull View itemView) {
             super(itemView);
@@ -106,8 +116,34 @@ public class productAdapter extends RecyclerView.Adapter<productAdapter.viewHold
             productOldPrice = itemView.findViewById(R.id.oldPrice);
             productNewPrice = itemView.findViewById(R.id.newPrice);
             productStatus = itemView.findViewById(R.id.productDeliveryStatus);
-            AddProductBtn = itemView.findViewById(R.id.AddProductBtn);
-            
+            addProductBtn = itemView.findViewById(R.id.AddProductBtn);
+
+          //  productModalClass adapterPosition = productList.get(getAdapterPosition());
+
+            addProductBtn.setOnClickListener(view -> {
+
+                productList.get(getAdapterPosition()).setCheckPotion(true);
+                addProductBtn.setVisibility(View.GONE);
+                minus.setVisibility(View.VISIBLE);
+                plus.setVisibility(View.VISIBLE);
+                productAddItemCounts.setVisibility(View.VISIBLE);
+            });
+
+            plus.setOnClickListener(view -> {
+                productList.get(getAdapterPosition()).setCurrentCount(productList.get(getAdapterPosition()).getCurrentCount() + 1);
+                notifyItemChanged(getAdapterPosition());
+            });
+            minus.setOnClickListener(view -> {
+                if (productList.get(getAdapterPosition()).getCurrentCount() <= 1) {
+                    addProductBtn.setVisibility(View.VISIBLE);
+                    productList.get(getAdapterPosition()).setCheckPotion(false);
+                } else {
+                    productList.get(getAdapterPosition()).setCurrentCount(productList.get(getAdapterPosition()).getCurrentCount() - 1);
+                    notifyItemChanged(getAdapterPosition());
+                }
+            });
         }
+
+
     }
 }

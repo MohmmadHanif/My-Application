@@ -1,29 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context=".ConstraintLayouAndRecycleview.ProductFilterActivity">
-
-
+    tools:context=".ConstraintLayoutAndRecycleView.ProductFilterActivity">
 
     <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/purple_500"
-        android:id="@+id/toolbar">
+        android:background="@color/lite_Red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/backImage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/arrow_back"
             android:layout_marginStart="20dp"
+            android:src="@drawable/arrow_back"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
             tools:ignore="ContentDescription" />
 
         <com.google.android.material.textview.MaterialTextView
@@ -41,229 +42,258 @@
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.appcompat.widget.Toolbar>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/sortBy"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:background="#EDEBEB"
-        >
-
-        <com.google.android.material.textview.MaterialTextView
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:text="@string/sort_by"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:fontFamily="@font/actor"
-            android:layout_marginStart="30dp"
-            android:gravity="center_vertical"/>
-            "/>
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <com.google.android.material.tabs.TabLayout
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        app:tabSelectedTextColor="@color/white"
-        app:tabBackground="@drawable/tabselected"
-        android:layout_margin="15dp"
-        android:background="@drawable/roundedbutton"
-        app:tabTextColor="@color/black"
-        >
-
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="date"
-            />
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="popularity"
-            />
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="Distance"
-            />
-
-    </com.google.android.material.tabs.TabLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#EDEBEB"
-        >
-
-        <com.google.android.material.textview.MaterialTextView
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:text="Distance"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:fontFamily="@font/actor"
-            android:layout_marginStart="30dp"
-            android:gravity="center_vertical"/>
-        "/>
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <SeekBar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"/>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#EDEBEB"
-        >
-
-        <com.google.android.material.textview.MaterialTextView
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:text="Price"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:fontFamily="@font/actor"
-            android:layout_marginStart="30dp"
-            android:gravity="center_vertical"/>
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <com.google.android.material.tabs.TabLayout
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        app:tabSelectedTextColor="@color/white"
-        app:tabBackground="@drawable/tabselected"
-        android:layout_margin="15dp"
-        android:background="@drawable/roundedbutton"
-        app:tabTextColor="@color/black"
-        >
-
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="free"
-            />
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="Paid"
-            />
-
-
-    </com.google.android.material.tabs.TabLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#EDEBEB"
-        >
-
-        <com.google.android.material.textview.MaterialTextView
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:text="People"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:fontFamily="@font/actor"
-            android:layout_marginStart="30dp"
-            android:gravity="center_vertical"/>
-        "/>
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <com.google.android.material.tabs.TabLayout
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        app:tabSelectedTextColor="@color/white"
-        app:tabBackground="@drawable/tabselected"
-        android:layout_margin="15dp"
-        android:background="#898383"
-        app:tabTextColor="@color/black"
-        >
-
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="Rangers"
-            />
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="Follow"
-            />
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="@string/any"
-            />
-
-    </com.google.android.material.tabs.TabLayout>
+        android:fontFamily="@font/actor"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="30dp"
+        android:text="@string/sort_by"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#EDEBEB"
-        >
+        android:id="@+id/consSortByButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:orientation="vertical"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sortBy">
 
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/Interests"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:text="Interests"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:fontFamily="@font/actor"
-            android:layout_marginStart="30dp"
-            android:gravity="center_vertical"/>
-
-        <ImageView
-            android:layout_width="15dp"
-            android:layout_height="15dp"
-            android:src="@drawable/add"
-            app:layout_constraintBottom_toBottomOf="@+id/Interests"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/Interests"
-            android:layout_marginEnd="20dp"/>
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/RVFilter"
-            android:background="@color/white"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSortBy1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:background="@drawable/button_states_2"
+            android:text="@string/date"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            app:backgroundTint="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnSortBy2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+
+        <Button
+            android:id="@+id/btnSortBy2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_states"
+            android:text="@string/popularity"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            app:backgroundTint="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnSortBy3"
+            app:layout_constraintStart_toEndOf="@+id/btnSortBy1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnSortBy3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_states_3"
+            android:text="@string/distance"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            app:backgroundTint="@null"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginVertical="4dp"
-            app:layout_constraintTop_toBottomOf="@+id/Interests"
-            tools:listitem="@layout/filter_interests_item_view" />
+            app:layout_constraintStart_toEndOf="@+id/btnSortBy2"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</LinearLayout>
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/distance"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#EDEBEB"
+        android:fontFamily="@font/actor"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="30dp"
+        android:text="Distance"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/consSortByButtons" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="25dp"
+        android:padding="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/distance" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/price"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#EDEBEB"
+        android:fontFamily="@font/actor"
+        android:gravity="center_vertical"
+        android:paddingStart="30dp"
+        android:text="Price"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/seekBar" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/consPriceButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:orientation="vertical"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/price">
+
+        <Button
+            android:id="@+id/free"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_states_2"
+            android:text="Free"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            app:backgroundTint="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/paid"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <Button
+            android:id="@+id/paid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_states_3"
+            android:text="Paid"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            app:backgroundTint="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/free"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/people"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#EDEBEB"
+        android:fontFamily="@font/actor"
+        android:gravity="center_vertical"
+        android:paddingStart="30dp"
+        android:text="People"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/consPriceButtons" />
+
+    //sortbyButtons
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/consPeopleButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:orientation="vertical"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/people">
+
+        <Button
+            android:id="@+id/btnRanger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_states_2"
+            android:text="Ranger"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            app:backgroundTint="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnFollow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <Button
+            android:id="@+id/btnFollow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_states"
+            android:text="Follow"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            app:backgroundTint="@null"
+            android:layout_marginHorizontal="-1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnAny"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnAny"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_states_3"
+            android:text="Any"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            app:backgroundTint="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/interests"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#EDEBEB"
+        android:fontFamily="@font/actor"
+        android:gravity="center_vertical"
+        android:paddingStart="30dp"
+        android:text="People"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/consPeopleButtons" />
+
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/add"
+        app:layout_constraintBottom_toBottomOf="@+id/interests"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/interests" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RVFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="4dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/interests"
+        tools:listitem="@layout/filter_interests_item_view" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

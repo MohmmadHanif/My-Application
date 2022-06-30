@@ -13,4 +13,13 @@
     <string name="_20">20</string>
     <string name="standard_delivery_tomorrow_evening">Standard Delivery (Tomorrow Evening)</string>
     <string name="any">Any</string>
+    <string name="date">Date</string>
+    <string name="popularity">Popularity</string>
+    <string name="distance">Distance</string>
+    <string name="price">Price</string>
+    <string name="free">Free</string>
+    <string name="paid">Paid</string>
+    <string name="people">People</string>
+    <string name="ranger">Ranger</string>
+    <string name="follow">Follow</string>
 </resources>

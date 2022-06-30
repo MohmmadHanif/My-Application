@@ -1,4 +1,4 @@
-package com.example.myapplication.ConstraintLayouAndRecycleview.Adapters;
+package com.example.myapplication.ConstraintLayoutAndRecycleView.Adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.myapplication.ConstraintLayouAndRecycleview.Modals.productFilterModalClass;
+import com.example.myapplication.ConstraintLayoutAndRecycleView.Modals.productFilterModalClass;
 import com.example.myapplication.R;
 
 import java.util.ArrayList;

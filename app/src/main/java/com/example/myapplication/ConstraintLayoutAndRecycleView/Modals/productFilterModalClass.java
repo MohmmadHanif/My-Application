@@ -1,4 +1,4 @@
-package com.example.myapplication.ConstraintLayouAndRecycleview.Modals;
+package com.example.myapplication.ConstraintLayoutAndRecycleView.Modals;
 
 public class productFilterModalClass {
 

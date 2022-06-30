@@ -24,7 +24,7 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
-            android:name=".ConstraintLayouAndRecycleview.ProductFilterActivity"
+            android:name=".ConstraintLayoutAndRecycleView.ProductFilterActivity"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
@@ -40,7 +40,7 @@
             android:name=".CameraAndGallery.SelectImageActivity"
             android:exported="false" />
         <activity
-            android:name=".ConstraintLayouAndRecycleview.ProductListActivity"
+            android:name=".ConstraintLayoutAndRecycleView.ProductListActivity"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>

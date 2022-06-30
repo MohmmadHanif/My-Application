@@ -1,9 +1,28 @@
-package com.example.myapplication.ConstraintLayouAndRecycleview.Modals;
+package com.example.myapplication.ConstraintLayoutAndRecycleView.Modals;
 
 public class productModalClass {
 
     String oldPrice, newPrice, productQuantity, productName, productDeliveryStatus, productType;
     int vegOrNonVegImage, productImage;
+    int currentCount;
+
+    boolean checkPotion;
+
+    public boolean getCheckPotion() {
+        return checkPotion;
+    }
+
+    public void setCheckPotion(boolean checkPotion) {
+        this.checkPotion = checkPotion;
+    }
+
+    public int getCurrentCount() {
+        return currentCount;
+    }
+
+    public void setCurrentCount(int currentCount) {
+        this.currentCount = currentCount;
+    }
 
     public productModalClass(String oldPrice, String newPrice, String productQuantity, String productName, String productDeliveryStatus, int vegOrNonVegImage, int productImage, String productType) {
         this.oldPrice = oldPrice;
