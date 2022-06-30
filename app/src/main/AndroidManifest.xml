@@ -24,9 +24,12 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
-            android:name=".ConstraintLayoutAndRecycleView.ProductFilterActivity"
-            android:screenOrientation="portrait"
+            android:name=".ConstraintLayoutAndRecycleView.ProductListActivity"
             android:exported="false" />
+        <activity
+            android:name=".ConstraintLayoutAndRecycleView.ProductFilterActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Fregment.Fregment_lifecycle"
             android:exported="false" />
@@ -40,7 +43,7 @@
             android:name=".CameraAndGallery.SelectImageActivity"
             android:exported="false" />
         <activity
-            android:name=".ConstraintLayoutAndRecycleView.ProductListActivity"
+            android:name=".Canvas.CanvasFirstActivity"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>

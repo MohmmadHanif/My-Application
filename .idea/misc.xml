@@ -28,6 +28,7 @@
         <entry key="app/src/main/res/drawable/tabselected.xml" value="0.1435" />
         <entry key="app/src/main/res/layout/activity_a.xml" value="0.21" />
         <entry key="app/src/main/res/layout/activity_b.xml" value="0.28802083333333334" />
+        <entry key="app/src/main/res/layout/activity_canvas_first.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_encapsulation.xml" value="0.31614583333333335" />
         <entry key="app/src/main/res/layout/activity_fregment_lifecycle.xml" value="0.24094202898550723" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.15572916666666667" />
