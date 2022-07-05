@@ -22,4 +22,7 @@
     <string name="people">People</string>
     <string name="ranger">Ranger</string>
     <string name="follow">Follow</string>
+    <string name="clear">Clear</string>
+    <string name="circle">Circle</string>
+    <string name="rectangle">Rectangle</string>
 </resources>

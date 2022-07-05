@@ -16,6 +16,7 @@
         <entry key="app/src/main/res/drawable/left_side_round_border.xml" value="0.168" />
         <entry key="app/src/main/res/drawable/line.xml" value="0.139" />
         <entry key="app/src/main/res/drawable/right_side_carve_border.xml" value="0.15" />
+        <entry key="app/src/main/res/drawable/round_border.xml" value="0.1065" />
         <entry key="app/src/main/res/drawable/round_tab.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/roundedbutton.xml" value="0.1965" />
         <entry key="app/src/main/res/drawable/roundtabs.xml" value="0.1345" />
@@ -28,7 +29,8 @@
         <entry key="app/src/main/res/drawable/tabselected.xml" value="0.1435" />
         <entry key="app/src/main/res/layout/activity_a.xml" value="0.21" />
         <entry key="app/src/main/res/layout/activity_b.xml" value="0.28802083333333334" />
-        <entry key="app/src/main/res/layout/activity_canvas_first.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_canvas_demo.xml" value="0.28802083333333334" />
+        <entry key="app/src/main/res/layout/activity_canvas_first.xml" value="0.29814814814814816" />
         <entry key="app/src/main/res/layout/activity_encapsulation.xml" value="0.31614583333333335" />
         <entry key="app/src/main/res/layout/activity_fregment_lifecycle.xml" value="0.24094202898550723" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.15572916666666667" />

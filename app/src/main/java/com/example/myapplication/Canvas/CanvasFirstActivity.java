@@ -1,103 +1,68 @@
 package com.example.myapplication.Canvas;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
-import android.content.Context;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
-import android.graphics.Path;
 import android.os.Bundle;
-import android.util.AttributeSet;
-import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.myapplication.R;
 
-public class CanvasFirstActivity extends AppCompatActivity {
+public class CanvasFirstActivity extends AppCompatActivity implements View.OnClickListener {
 
     MyCanvas myCanvas;
-    private Button btnClear;
-    private ConstraintLayout constraintLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_canvas_first);
-        constraintLayout = findViewById(R.id.conslayout);
-        btnClear = findViewById(R.id.btnClear);
+        ConstraintLayout constraintLayout = findViewById(R.id.consLayout);
         myCanvas = new MyCanvas(this, null);
+        /*setContentView(myCanvas);*/
         constraintLayout.addView(myCanvas);
 
-        btnClear.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-            myCanvas.clearView();
+        Button btnClear = findViewById(R.id.btnClear);
+        Button btnLine = findViewById(R.id.btnLine);
+        Button btnOval = findViewById(R.id.btnOval);
+        Button btnRectangle = findViewById(R.id.btnRect);
 
-            }
-        });
+        btnClear.setOnClickListener(this);
+        btnLine.setOnClickListener(this);
+        btnOval.setOnClickListener(this);
+        btnRectangle.setOnClickListener(this);
     }
 
-    public static class MyCanvas extends View {
 
-        Paint paint;
-        Path path;
+    @Override
+    public void onClick(View view) {
 
-        public MyCanvas(Context context, @Nullable AttributeSet attrs) {
-            super(context, attrs);
+        switch (view.getId()) {
+            case R.id.btnLine:
+                myCanvas.mCurrentShape = myCanvas.SMOOTHLINE;
+                myCanvas.reset();
+                Toast.makeText(this, "Line Shape Selected", Toast.LENGTH_SHORT).show();
+                break;
 
-            paint = new Paint();
-            path = new Path();
-            paint.setColor(Color.BLACK);
-            paint.setStyle(Paint.Style.STROKE);
-            paint.setStrokeWidth(15f);
-            paint.setStrokeCap(Paint.Cap.ROUND);
+            case R.id.btnOval:
+                myCanvas.mCurrentShape = myCanvas.OVAL;
+                Toast.makeText(this, "Oval Shape Selected", Toast.LENGTH_SHORT).show();
+                myCanvas.reset();
+                break;
 
-        }
+            case R.id.btnRect:
+                myCanvas.mCurrentShape = myCanvas.RECTANGLE;
+                Toast.makeText(this, "Rectangle Shape Selected", Toast.LENGTH_SHORT).show();
+                myCanvas.reset();
+                break;
 
-        @Override
-        protected void onDraw(Canvas canvas) {
-            super.onDraw(canvas);
-            canvas.drawPath(path, paint);
-            /*canvas.drawLine(150f, 153f, 280, 300, paint);*/
-            canvas.drawCircle(250f, 550, 180f, paint);
-            canvas.drawRect(650f,550f,1000,750f,paint);
-        }
+            case R.id.btnClear:
+                myCanvas.clear();
+                Toast.makeText(this, "Clear Successful", Toast.LENGTH_SHORT).show();
+                break;
+            default:
 
-        @Override
-        public boolean onTouchEvent(MotionEvent event) {
-            float xPos = event.getX();
-            float yPos = event.getY();
-
-
-            switch (event.getAction()) {
-                case MotionEvent.ACTION_DOWN:
-                    path.moveTo(xPos, yPos);
-                    return true;
-
-                case MotionEvent.ACTION_MOVE:
-                    path.lineTo(xPos, yPos);
-                    break;
-                case MotionEvent.ACTION_UP:
-                    break;
-                case MotionEvent.ACTION_BUTTON_PRESS:
-                    path.reset();
-                default:
-                    return false;
-            }
-
-            invalidate();
-            return true;
-
-        }
-
-        public void clearView() {
-            path = new Path();
-            invalidate();
         }
     }
 }

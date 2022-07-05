@@ -2,18 +2,46 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/conslayout"
+    android:id="@+id/consLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Canvas.CanvasFirstActivity">
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnClear"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Clear"
+        android:text="@string/clear"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+
+    <Button
+        android:id="@+id/btnLine"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:text="line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnOval"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:text="oval"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toStartOf="@id/btnRect"
+        app:layout_constraintStart_toEndOf="@id/btnLine"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnRect"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:text="@string/rectangle"
+        android:textAllCaps="false"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
