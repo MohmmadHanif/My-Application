@@ -4,10 +4,11 @@
     package="com.example.myapplication">
 
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
 
     <uses-feature
         android:name="android.hardware.camera"
@@ -24,7 +25,16 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
-            android:name=".CanvasDemo"
+            android:name=".Sqlite.SQliteUpdateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Sqlite.SqliteMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Sqlite.SqliteAddDataActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Canvas.CanvasDemo"
             android:exported="false" />
         <activity
             android:name=".ConstraintLayoutAndRecycleView.ProductListActivity"
@@ -46,7 +56,7 @@
             android:name=".CameraAndGallery.SelectImageActivity"
             android:exported="false" />
         <activity
-            android:name=".Canvas.CanvasFirstActivity"
+            android:name=".AndroidActivityLifeCycle.MainActivity"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -56,7 +66,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".AndroidActivityLifeCycle.MainActivity"
+            android:name=".Canvas.CanvasFirstActivity"
             android:exported="false" />
         <activity
             android:name=".DemoOOPS.Polymorphisum"

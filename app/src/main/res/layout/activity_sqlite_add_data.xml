@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/DarkGray"
+    tools:context=".Sqlite.SqliteAddDataActivity">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvAddDataSqlite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Data"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="60dp"
+        android:textSize="40sp"
+        android:textColor="@color/black"
+        android:textStyle="italic"/>
+
+    <!--Name-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etNameAddDataLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvAddDataSqlite"
+        android:layout_margin="20dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="Enter Name">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etNameAddData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <!--PhoneNumber-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etPhoneAddDataLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/etNameAddDataLayout"
+        app:layout_constraintStart_toStartOf="@id/etNameAddDataLayout"
+        app:layout_constraintEnd_toEndOf="@id/etNameAddDataLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_margin="20dp"
+        android:hint="Enter PhoneNumber">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPhoneAddData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <!--Email-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etEmailAddDataLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/etPhoneAddDataLayout"
+        app:layout_constraintStart_toStartOf="@id/etPhoneAddDataLayout"
+        app:layout_constraintEnd_toEndOf="@id/etPhoneAddDataLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_margin="20dp"
+        android:hint="Enter Email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etEmailAddData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <!--Course-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etCourseAddDataLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/etEmailAddDataLayout"
+        app:layout_constraintStart_toStartOf="@id/etEmailAddDataLayout"
+        app:layout_constraintEnd_toEndOf="@id/etEmailAddDataLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_margin="20dp"
+        android:hint="Enter Course Name">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etCourseAddData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Data"
+        app:layout_constraintTop_toBottomOf="@id/etCourseAddDataLayout"
+        app:layout_constraintStart_toStartOf="@id/etCourseAddDataLayout"
+        app:layout_constraintEnd_toEndOf="@id/etCourseAddDataLayout"
+        android:id="@+id/btnAddDataSqlite"
+        android:textColor="@color/black"
+        app:backgroundTint="@null"
+        android:background="@drawable/gradient_button"
+        android:layout_marginTop="50dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

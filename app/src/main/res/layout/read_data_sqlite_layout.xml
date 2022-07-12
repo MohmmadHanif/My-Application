@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/readSqliteDataLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="5dp"
+    android:background="@drawable/round_border">
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvNameSqlite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hanif"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvPhoneNumberSqlite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="8153815190"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNameSqlite" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvCourseNameSqlite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:text="MCA"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/tvPhoneNumberSqlite"
+        app:layout_constraintTop_toBottomOf="@+id/tvNameSqlite" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvEmailSqlite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hanif.shaikh@matrixhive@gmail.com"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPhoneNumberSqlite" />
+</androidx.constraintlayout.widget.ConstraintLayout>

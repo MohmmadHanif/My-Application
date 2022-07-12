@@ -41,20 +41,20 @@ public class CanvasFirstActivity extends AppCompatActivity implements View.OnCli
         switch (view.getId()) {
             case R.id.btnLine:
                 myCanvas.mCurrentShape = myCanvas.SMOOTHLINE;
-                myCanvas.reset();
+
                 Toast.makeText(this, "Line Shape Selected", Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.btnOval:
                 myCanvas.mCurrentShape = myCanvas.OVAL;
                 Toast.makeText(this, "Oval Shape Selected", Toast.LENGTH_SHORT).show();
-                myCanvas.reset();
+
                 break;
 
             case R.id.btnRect:
                 myCanvas.mCurrentShape = myCanvas.RECTANGLE;
                 Toast.makeText(this, "Rectangle Shape Selected", Toast.LENGTH_SHORT).show();
-                myCanvas.reset();
+
                 break;
 
             case R.id.btnClear:
