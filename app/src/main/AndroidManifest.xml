@@ -29,12 +29,10 @@
             android:exported="false" />
         <activity
             android:name=".Sqlite.SqliteMainActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".Sqlite.SqliteAddDataActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Canvas.CanvasDemo"
             android:exported="false" />
         <activity
             android:name=".ConstraintLayoutAndRecycleView.ProductListActivity"

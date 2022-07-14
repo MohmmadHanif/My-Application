@@ -10,12 +10,11 @@ import androidx.annotation.Nullable;
 
 import com.example.myapplication.Sqlite.Modal.SqliteModal;
 
-import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 
 public class DataBaseHelper extends SQLiteOpenHelper {
 
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
     private static final String DB_NAME = "StudentData";
     private static final String TABLE_NAME = "StudentDetail";
     private static final String ID = "id";
@@ -23,42 +22,42 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     private static final String PHONE_NUMBER = "phoneNumber";
     private static final String EMAIL = "email";
     private static final String COURSE_NAME = "courseName";
+    private static final String GENDER = "gender";
+    private static final String MALE = "male";
 
 
     public DataBaseHelper(@Nullable Context context) {
-        super(context, DB_NAME, null, DATABASE_VERSION);
+        super(context, DB_NAME, null,DATABASE_VERSION);
     }
+
+    String createDetailQuery = "CREATE TABLE IF NOT EXISTS " + TABLE_NAME + "("
+            + ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+            + NAME + " TEXT, "
+            + PHONE_NUMBER + " TEXT, "
+            + EMAIL + " TEXT, "
+            + COURSE_NAME + " TEXT"
+            + ")";
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String createDetailQuery = "CREATE TABLE " + TABLE_NAME + "("
-                + ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-                + NAME + " TEXT, "
-                + PHONE_NUMBER + " TEXT, "
-                + EMAIL + " TEXT, "
-                + COURSE_NAME + " TEXT"
-                + ")";
-
         db.execSQL(createDetailQuery);
-
-      /*  String query = "CREATE TABLE " + TABLE_NAME + "("
-                + ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-                + NAME + " TEXT, "
-                + EMAIL + " TEXT, "
-                + PHONE_NUMBER + " TEXT, "
-                + COURSE_NAME + " TEXT "
-                + ")";
-        db.execSQL(query);*/
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
-        db.execSQL("Drop table if exists " + TABLE_NAME);
+        db.execSQL(createDetailQuery);
+        db.execSQL("ALTER TABLE " + TABLE_NAME + " ADD COLUMN "+ GENDER + " TEXT DEFAULT 'Male'");
+        /*switch(i) {
+            case 1:
+                db.execSQL(createDetailQuery);
+            case 2:
+                db.execSQL("ALTER TABLE " + TABLE_NAME + " ADD COLUMN "+ GENDER + " TEXT DEFAULT 'Female'");
+        }*/
         onCreate(db);
     }
 
     /*INSERT*/
-    public void insertDataQuery(String name, String phoneNumber, String email, String courseName) {
+    public void insertDataQuery(String name, String phoneNumber, String email, String courseName,String gender) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
 
@@ -66,9 +65,11 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         cv.put(PHONE_NUMBER, phoneNumber);
         cv.put(EMAIL, email);
         cv.put(COURSE_NAME, courseName);
+        cv.put(GENDER, gender);
         db.insert(TABLE_NAME, null, cv);
         db.close();
     }
+
     /*SHOW ALL RECORD*/
     public ArrayList<SqliteModal> readAllData() {
         SQLiteDatabase db = this.getReadableDatabase();
@@ -82,45 +83,36 @@ public class DataBaseHelper extends SQLiteOpenHelper {
                 sqliteModalArrayList.add(new SqliteModal(cursor.getString(1),
                         cursor.getString(3),
                         cursor.getString(4),
-                        cursor.getString(2)));
+                        cursor.getString(2),
+                        cursor.getString(5)));
 
-            }while (cursor.moveToNext());
+            } while (cursor.moveToNext());
         }
 
         cursor.close();
         return sqliteModalArrayList;
     }
 
-    public void delete(String name){
+    /*DELETE*/
+    public void delete(String name) {
         SQLiteDatabase db = this.getReadableDatabase();
-        db.delete(TABLE_NAME,NAME +"=?",new String[]{name});
-        db.close();
-    }
-    public void deleteData(String name){
-        SQLiteDatabase db = this.getWritableDatabase();
-    /*       db.execSQL("DELETE FROM " + TABLE_NAME + " WHERE " +
-                ID + " = " + position + ";");
-        db.execSQL("UPDATE " + TABLE_NAME + " SET " + ID + " = " +
-                ID + " -1 " + " WHERE " + ID + " > " + position + ";");
-    */
-
-            db.delete(TABLE_NAME, NAME + " = ? ", new String[]{name});
-            db.close();
-
+        db.delete(TABLE_NAME, NAME + "=?", new String[]{name});
         db.close();
     }
 
     /*UPDATE*/
-    public void updateData(String checkName,String name, String phoneNumber, String email, String courseName){
+    public void updateData(String checkName, String name, String phoneNumber, String email, String courseName, String gender) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
 
         values.put(NAME, name);
         values.put(PHONE_NUMBER, phoneNumber);
-        values.put(EMAIL,email);
+        values.put(EMAIL, email);
         values.put(COURSE_NAME, courseName);
+        values.put(GENDER, gender);
 
         db.update(TABLE_NAME, values, NAME + " = ? ", new String[]{checkName});
+        readAllData();
         db.close();
     }
 

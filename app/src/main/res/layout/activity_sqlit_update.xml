@@ -96,13 +96,23 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+    <Spinner
+        android:id="@+id/updateGenderSpinner"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/etCourseAddDataLayout"
+        app:layout_constraintStart_toStartOf="@id/etCourseAddDataLayout"
+        app:layout_constraintEnd_toEndOf="@id/etCourseAddDataLayout"
+        android:layout_margin="20dp"
+        />
+
         <com.google.android.material.button.MaterialButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/update_data"
-            app:layout_constraintTop_toBottomOf="@id/etCourseAddDataLayout"
-            app:layout_constraintStart_toStartOf="@id/etCourseAddDataLayout"
-            app:layout_constraintEnd_toEndOf="@id/etCourseAddDataLayout"
+            app:layout_constraintTop_toBottomOf="@id/updateGenderSpinner"
+            app:layout_constraintStart_toStartOf="@id/updateGenderSpinner"
+            app:layout_constraintEnd_toEndOf="@id/updateGenderSpinner"
             android:id="@+id/btnUpdateDataSqlite"
             app:backgroundTint="@null"
             android:textColor="@color/black"

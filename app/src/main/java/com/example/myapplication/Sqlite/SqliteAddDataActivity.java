@@ -1,23 +1,27 @@
 package com.example.myapplication.Sqlite;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatButton;
 
-import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.util.Patterns;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.Button;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.myapplication.R;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 
+import java.util.regex.Pattern;
+
 public class SqliteAddDataActivity extends AppCompatActivity {
 
     private TextInputEditText nameEdt, phoneNumberEdt, emailEdt, courseNameEdt;
     private MaterialButton btnAddDataSqlite;
+    private Spinner addGenderSpinner;
     private DataBaseHelper dataBaseHelper;
 
     @Override
@@ -31,10 +35,14 @@ public class SqliteAddDataActivity extends AppCompatActivity {
         phoneNumberEdt = findViewById(R.id.etPhoneAddData);
         emailEdt = findViewById(R.id.etEmailAddData);
         courseNameEdt = findViewById(R.id.etCourseAddData);
-
+        addGenderSpinner = findViewById(R.id.addGenderSpinner);
         btnAddDataSqlite = findViewById(R.id.btnAddDataSqlite);
         dataBaseHelper = new DataBaseHelper(SqliteAddDataActivity.this);
 
+        String gender[] = {"Pick Any One", "Male", "Female"};
+
+        ArrayAdapter<String> adapter = new ArrayAdapter(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, gender);
+        addGenderSpinner.setAdapter(adapter);
         btnAddDataSqlite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -42,18 +50,33 @@ public class SqliteAddDataActivity extends AppCompatActivity {
                 String phoneNumber = phoneNumberEdt.getText().toString().trim();
                 String email = emailEdt.getText().toString().trim();
                 String course = courseNameEdt.getText().toString().trim();
+                String gender = addGenderSpinner.getSelectedItem().toString().trim();
+                Log.e("Gender", gender);
 
-                if (name.isEmpty() || phoneNumber.isEmpty() || email.isEmpty() || course.isEmpty()) {
-                    Toast.makeText(SqliteAddDataActivity.this, "Please Fill All Data", Toast.LENGTH_SHORT).show();
-                    return;
+
+                if (name.isEmpty() || !name.matches("^[A-Za-z]+$")) {
+                    nameEdt.setError("Enter Valid Name");
+                    nameEdt.requestFocus();
+                } else if (phoneNumber.isEmpty() || phoneNumber.length() < 10 || phoneNumber.length() > 11 || !Patterns.PHONE.matcher(phoneNumber).matches()) {
+                    phoneNumberEdt.setError("Enter 10 Digit PhoneNumber");
+                    phoneNumberEdt.requestFocus();
+                } else if (email.isEmpty() || !Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                    emailEdt.setError("Enter Valid Email");
+                    emailEdt.requestFocus();
+                } else if (course.isEmpty() || !course.matches("^[A-Za-z]+$")) {
+                    courseNameEdt.setError("Enter Valid CourseName");
+                    courseNameEdt.requestFocus();
+                } else if (addGenderSpinner.getSelectedItem().toString().trim().equals("Pick Any One")) {
+                    Toast.makeText(SqliteAddDataActivity.this, "Please Select Gender", Toast.LENGTH_SHORT).show();
+                    addGenderSpinner.requestFocus();
+                } else {
+                    dataBaseHelper.insertDataQuery(name, phoneNumber, email, course,gender);
+                    Toast.makeText(SqliteAddDataActivity.this, "Insert SuccessFull!", Toast.LENGTH_SHORT).show();
+                    finish();
                 }
-                dataBaseHelper.insertDataQuery(name, phoneNumber, email, course);
-                Toast.makeText(SqliteAddDataActivity.this, "Insert SuccessFull!", Toast.LENGTH_SHORT).show();
-
-                startActivity(new Intent(SqliteAddDataActivity.this, SqliteMainActivity.class));
-                finish();
             }
         });
 
     }
+
 }

@@ -95,13 +95,23 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+    <Spinner
+        android:id="@+id/addGenderSpinner"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/etCourseAddDataLayout"
+        app:layout_constraintStart_toStartOf="@id/etCourseAddDataLayout"
+        app:layout_constraintEnd_toEndOf="@id/etCourseAddDataLayout"
+        android:layout_margin="20dp"
+       />
+
     <com.google.android.material.button.MaterialButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add Data"
-        app:layout_constraintTop_toBottomOf="@id/etCourseAddDataLayout"
-        app:layout_constraintStart_toStartOf="@id/etCourseAddDataLayout"
-        app:layout_constraintEnd_toEndOf="@id/etCourseAddDataLayout"
+        app:layout_constraintTop_toBottomOf="@id/addGenderSpinner"
+        app:layout_constraintStart_toStartOf="@id/addGenderSpinner"
+        app:layout_constraintEnd_toEndOf="@id/addGenderSpinner"
         android:id="@+id/btnAddDataSqlite"
         android:textColor="@color/black"
         app:backgroundTint="@null"
