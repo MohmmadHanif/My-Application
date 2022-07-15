@@ -9,6 +9,15 @@
     <color name="white">#FFFFFFFF</color>
     <color name="simple">#EDEBEB</color>
 
+    <color name="primaryColor">#ede7f6</color>
+    <color name="primaryLightColor">#76d275</color>
+    <color name="primaryDarkColor">#00701a</color>
+    <color name="primaryTextColor">#000000</color>
+    <color name="lite_green">#c8e6c9</color>
+    <color name="lite_green1">#56AB2F</color>
+    <color name="lite_green2">#A8E063</color>
+
+
     <color name="yellow1">#F9E60E</color>
     <color name="yellow2">#F9F89D</color>
     <color name="orange4">#F7BE45</color>

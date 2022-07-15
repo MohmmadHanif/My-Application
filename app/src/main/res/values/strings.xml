@@ -26,4 +26,11 @@
     <string name="circle">Circle</string>
     <string name="rectangle">Rectangle</string>
     <string name="update_data">Update Data</string>
+    
+    
+    <array name="gender">
+        <item>Pick Any One</item>
+        <item>Male</item>
+        <item>Female</item>
+    </array>
 </resources>

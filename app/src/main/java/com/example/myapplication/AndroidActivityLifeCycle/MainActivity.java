@@ -11,6 +11,7 @@ import android.widget.Button;
 import com.example.myapplication.Canvas.CanvasFirstActivity;
 import com.example.myapplication.ConstraintLayoutAndRecycleView.ProductListActivity;
 import com.example.myapplication.R;
+import com.example.myapplication.Room.roomStudentMainActivity;
 import com.example.myapplication.Sqlite.SqliteMainActivity;
 
 
@@ -27,10 +28,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button constraintLayoutDemoBtn = findViewById(R.id.constantLayoutDemo);
         Button canvasDemoBtn = findViewById(R.id.canvasDemo);
         Button sqliteDemo = findViewById(R.id.sqliteDemo);
+        Button roomDemo = findViewById(R.id.roomDemo);
 
         constraintLayoutDemoBtn.setOnClickListener(this);
         canvasDemoBtn.setOnClickListener(this);
         sqliteDemo.setOnClickListener(this);
+        roomDemo.setOnClickListener(this);
 
     }
 
@@ -46,6 +49,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(new Intent(this, CanvasFirstActivity.class));
         }else if (v.getId() == R.id.sqliteDemo) {
             startActivity(new Intent(this, SqliteMainActivity.class));
+        }else if (v.getId() == R.id.roomDemo) {
+            startActivity(new Intent(this, roomStudentMainActivity.class));
         }
     }
 

@@ -14,7 +14,7 @@ import com.example.myapplication.R;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 
-public class SQliteUpdateActivity extends AppCompatActivity {
+public class SqliteUpdateActivity extends AppCompatActivity {
 
     private TextInputEditText nameEdt, phoneNumberEdt, emailEdt, courseNameEdt;  /*genderEdt*/
     private MaterialButton btnUpdateDataSqlite;
@@ -40,7 +40,7 @@ public class SQliteUpdateActivity extends AppCompatActivity {
         updateGenderSpinner = findViewById(R.id.updateGenderSpinner);
 
         btnUpdateDataSqlite = findViewById(R.id.btnUpdateDataSqlite);
-        dataBaseHelper = new DataBaseHelper(SQliteUpdateActivity.this);
+        dataBaseHelper = new DataBaseHelper(SqliteUpdateActivity.this);
 
         String genderSpinnerName[] = {"Pick Any One", "Male", "Female"};
 

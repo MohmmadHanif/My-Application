@@ -5,6 +5,8 @@
       <map>
         <entry key="app/src/main/res/drawable-v24/button_states_3.xml" value="0.1075" />
         <entry key="app/src/main/res/drawable-v24/gradient_button.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/background_room.xml" value="0.276" />
+        <entry key="app/src/main/res/drawable/blue_outline.xml" value="0.276" />
         <entry key="app/src/main/res/drawable/btn_open_pressed.xml" value="0.1665" />
         <entry key="app/src/main/res/drawable/btn_state_normal.xml" value="0.244" />
         <entry key="app/src/main/res/drawable/btn_state_pressed.xml" value="0.244" />
@@ -19,6 +21,7 @@
         <entry key="app/src/main/res/drawable/left_side_round_border.xml" value="0.168" />
         <entry key="app/src/main/res/drawable/line.xml" value="0.139" />
         <entry key="app/src/main/res/drawable/right_side_carve_border.xml" value="0.15" />
+        <entry key="app/src/main/res/drawable/room_btn_gradiant.xml" value="0.2195" />
         <entry key="app/src/main/res/drawable/round_border.xml" value="0.1065" />
         <entry key="app/src/main/res/drawable/round_tab.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/roundedbutton.xml" value="0.1965" />
@@ -40,6 +43,8 @@
         <entry key="app/src/main/res/layout/activity_polymorphisum.xml" value="0.15476190476190477" />
         <entry key="app/src/main/res/layout/activity_product_filter.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_recycle_view.xml" value="0.35585585585585583" />
+        <entry key="app/src/main/res/layout/activity_room_main.xml" value="0.3140625" />
+        <entry key="app/src/main/res/layout/activity_room_student_addor_update.xml" value="0.5" />
         <entry key="app/src/main/res/layout/activity_select_image.xml" value="0.3015625" />
         <entry key="app/src/main/res/layout/activity_show_image.xml" value="0.31614583333333335" />
         <entry key="app/src/main/res/layout/activity_sqlit_update.xml" value="0.28802083333333334" />
@@ -53,6 +58,8 @@
         <entry key="app/src/main/res/layout/read_data_sqlite_layout.xml" value="0.2869791666666667" />
         <entry key="app/src/main/res/layout/recycle_item.xml" value="0.2869791666666667" />
         <entry key="app/src/main/res/layout/recycle_item_view.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/room_btn_gradiant.xml" value="0.31302083333333336" />
+        <entry key="app/src/main/res/layout/room_student_show_item.xml" value="0.33" />
         <entry key="app/src/main/res/layout/second_fragment.xml" value="0.12760416666666666" />
         <entry key="app/src/main/res/layout/shape_2.xml" value="0.2869791666666667" />
       </map>
@@ -63,5 +70,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.27923627684964203" />
+      </ProjectState>
+    </option>
   </component>
 </project>

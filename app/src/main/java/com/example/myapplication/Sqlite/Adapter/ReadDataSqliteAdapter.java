@@ -10,14 +10,14 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
+    import androidx.appcompat.app.AlertDialog;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication.R;
 import com.example.myapplication.Sqlite.DataBaseHelper;
 import com.example.myapplication.Sqlite.Modal.SqliteModal;
-import com.example.myapplication.Sqlite.SQliteUpdateActivity;
+import com.example.myapplication.Sqlite.SqliteUpdateActivity;
 import com.google.android.material.textview.MaterialTextView;
 
 import java.util.ArrayList;
@@ -88,7 +88,7 @@ public class ReadDataSqliteAdapter extends RecyclerView.Adapter<ReadDataSqliteAd
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             SqliteModal modal = sqliteModalArrayList.get(getAdapterPosition());
-                            Intent intent = new Intent(context, SQliteUpdateActivity.class);
+                            Intent intent = new Intent(context, SqliteUpdateActivity.class);
                             intent.putExtra(NAME, modal.getName());
                             intent.putExtra(PHONE_NUMBER, modal.getPhoneNumber());
                             intent.putExtra(EMAIL, modal.getEmail());

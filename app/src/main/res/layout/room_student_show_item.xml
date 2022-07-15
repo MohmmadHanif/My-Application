@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="8dp">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lite_green"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/roomRecordDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="10dp"
+            android:src="@drawable/delete"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvNameRoom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hanif"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvGenderRoom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:text="Male"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@id/tvNameRoom"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvPhoneNumberRoom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8153815190"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvNameRoom" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvCourseNameRoom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:text="MCA"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@id/tvPhoneNumberRoom"
+            app:layout_constraintTop_toBottomOf="@+id/tvNameRoom" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvEmailRoom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hanif.shaikh@matrixhive@gmail.com"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvPhoneNumberRoom" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
