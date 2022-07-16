@@ -1,11 +1,14 @@
 package com.example.myapplication.Room;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.myapplication.R;
 import com.example.myapplication.Room.Modal.roomStudentModal;
@@ -18,6 +21,12 @@ public class roomStudentMainActivity extends AppCompatActivity implements onclic
     RecyclerView rvRoomShowData;
     ArrayList<roomStudentModal> modalArrayList;
     roomStudentAdapter adapter;
+    public static final String UPDATE_TAG = "boolean";
+    private static final String NAME = "name";
+    private static final String PHONE_NUMBER = "phoneNumber";
+    private static final String EMAIL = "email";
+    private static final String COURSE_NAME = "courseName";
+    private static final String GENDER = "gender";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,9 +39,9 @@ public class roomStudentMainActivity extends AppCompatActivity implements onclic
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), roomStudentAddOrUpdateActivity.class);
-                startActivityForResult(i,1);
+                i.putExtra(UPDATE_TAG,false);
+                startActivity(i);
             }
-
 
         });
     }
@@ -50,9 +59,42 @@ public class roomStudentMainActivity extends AppCompatActivity implements onclic
 
     @Override
     public void onclick(int position) {
-        roomStudentDatabase studentDatabase = roomStudentDatabase.getDatabase(getApplicationContext());
-        roomStudentDAO dao = studentDatabase.roomDAO();
-        dao.delete(modalArrayList.get(position).getName());
-        modalArrayList.remove(position);
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Select Operation");
+        builder.setNegativeButton("Delete", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+                roomStudentDatabase studentDatabase = roomStudentDatabase.getDatabase(getApplicationContext());
+                roomStudentDAO dao = studentDatabase.roomDAO();
+                dao.delete(modalArrayList.get(position).getName());
+                modalArrayList.remove(position);
+            }
+        });
+
+        builder.setPositiveButton("Update", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                roomStudentModal modal = modalArrayList.get(position);
+                Intent intent = new Intent(getApplicationContext(),roomStudentAddOrUpdateActivity.class);
+                intent.putExtra(NAME,modal.getName());
+                intent.putExtra(PHONE_NUMBER,modal.getPhoneNumber());
+                intent.putExtra(EMAIL,modal.getEmail());
+                intent.putExtra(COURSE_NAME,modal.getCourseName());
+                intent.putExtra(GENDER,modal.getGender());
+                intent.putExtra(UPDATE_TAG,true);
+                startActivity(intent);
+            }
+        });
+
+        builder.setNeutralButton("cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Toast.makeText(roomStudentMainActivity.this, "cancel", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        builder.show();
     }
 }

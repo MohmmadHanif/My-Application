@@ -51,7 +51,11 @@ public class roomStudentAdapter extends RecyclerView.Adapter<roomStudentAdapter.
     }
 
     public class viewHolder extends RecyclerView.ViewHolder {
-        private MaterialTextView name, phoneNumber, email, courseName,gender;
+        private final MaterialTextView name;
+        private final MaterialTextView phoneNumber;
+        private final MaterialTextView email;
+        private final MaterialTextView courseName;
+        private final MaterialTextView gender;
         ImageView roomRecordDelete;
         public viewHolder(@NonNull View itemView) {
             super(itemView);
@@ -63,27 +67,10 @@ public class roomStudentAdapter extends RecyclerView.Adapter<roomStudentAdapter.
             gender = itemView.findViewById(R.id.tvGenderRoom);
             roomRecordDelete = itemView.findViewById(R.id.roomRecordDelete);
 
-/*
-            roomRecordDelete.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    roomStudentDatabase database = roomStudentDatabase.getDatabase(context);
-                    roomStudentDAO dao = database.roomDAO();
+            itemView.setOnClickListener(view -> {
 
-                    dao.delete(modalArrayList.get(getAdapterPosition()).getName());
-                    modalArrayList.remove(getAdapterPosition());
-                    notifyItemRemoved(getAdapterPosition());
-                }
-            });
-*/
-
-            roomRecordDelete.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-
-                    onclickAdapter.onclick(getAdapterPosition());
-                    notifyItemRemoved(getAdapterPosition());
-                }
+                onclickAdapter.onclick(getAdapterPosition());
+                notifyItemRemoved(getAdapterPosition());
             });
         }
     }
