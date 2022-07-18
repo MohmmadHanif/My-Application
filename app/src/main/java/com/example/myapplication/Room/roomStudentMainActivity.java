@@ -27,6 +27,11 @@ public class roomStudentMainActivity extends AppCompatActivity implements onclic
     private static final String EMAIL = "email";
     private static final String COURSE_NAME = "courseName";
     private static final String GENDER = "gender";
+    private static final String ID = "id";
+
+    roomStudentDatabase studentDatabase;
+    roomStudentDAO dao;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,11 +40,13 @@ public class roomStudentMainActivity extends AppCompatActivity implements onclic
         FloatingActionButton addStudentDataRoom = findViewById(R.id.addStudentDataRoom);
         rvRoomShowData = findViewById(R.id.rvRoomShowData);
 
+        studentDatabase = roomStudentDatabase.getDatabase(getApplicationContext());
+        dao = studentDatabase.roomDAO();
         addStudentDataRoom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), roomStudentAddOrUpdateActivity.class);
-                i.putExtra(UPDATE_TAG,false);
+                i.putExtra(UPDATE_TAG, false);
                 startActivity(i);
             }
 
@@ -49,11 +56,10 @@ public class roomStudentMainActivity extends AppCompatActivity implements onclic
     @Override
     protected void onResume() {
         super.onResume();
-        roomStudentDatabase studentDatabase = roomStudentDatabase.getDatabase(getApplicationContext());
-        roomStudentDAO dao = studentDatabase.roomDAO();
+
         modalArrayList = new ArrayList<>();
-        modalArrayList =(ArrayList) dao.getAllData();
-        adapter = new roomStudentAdapter(this,this,modalArrayList);
+        modalArrayList = (ArrayList) dao.getAllData();
+        adapter = new roomStudentAdapter(this, this, modalArrayList);
         rvRoomShowData.setAdapter(adapter);
     }
 
@@ -66,9 +72,9 @@ public class roomStudentMainActivity extends AppCompatActivity implements onclic
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
 
-                roomStudentDatabase studentDatabase = roomStudentDatabase.getDatabase(getApplicationContext());
-                roomStudentDAO dao = studentDatabase.roomDAO();
-                dao.delete(modalArrayList.get(position).getName());
+
+                dao.deleteData(modalArrayList.get(position).getId());
+                adapter.notifyItemRemoved(position);
                 modalArrayList.remove(position);
             }
         });
@@ -77,13 +83,16 @@ public class roomStudentMainActivity extends AppCompatActivity implements onclic
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 roomStudentModal modal = modalArrayList.get(position);
-                Intent intent = new Intent(getApplicationContext(),roomStudentAddOrUpdateActivity.class);
-                intent.putExtra(NAME,modal.getName());
-                intent.putExtra(PHONE_NUMBER,modal.getPhoneNumber());
-                intent.putExtra(EMAIL,modal.getEmail());
-                intent.putExtra(COURSE_NAME,modal.getCourseName());
-                intent.putExtra(GENDER,modal.getGender());
-                intent.putExtra(UPDATE_TAG,true);
+                Intent intent = new Intent(getApplicationContext(), roomStudentAddOrUpdateActivity.class);
+                intent.putExtra(ID, String.valueOf(modal.getId()));
+                intent.putExtra(NAME, modal.getName());
+                intent.putExtra(PHONE_NUMBER, modal.getPhoneNumber());
+                intent.putExtra(EMAIL, modal.getEmail());
+                intent.putExtra(COURSE_NAME, modal.getCourseName());
+                intent.putExtra(GENDER, modal.getGender());
+                intent.putExtra(UPDATE_TAG, true);
+                /*intent.putExtra(UPDATE_TAG,true);
+                intent.putExtra(UPDATE_TAG,true);*/
                 startActivity(intent);
             }
         });

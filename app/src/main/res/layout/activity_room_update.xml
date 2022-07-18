@@ -4,44 +4,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#c8e6c9"
-    tools:context=".Room.roomStudentAddOrUpdateActivity">
+    tools:context=".Room.roomUpdateActivity">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/roomAddOrUpdateToolbar"
+        android:background="#76d275"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#76d275"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/roomAddOrUpdateToolbar">
 
         <ImageView
             android:id="@+id/roomAddOrUpdateBackBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_baseline_arrow_back_24" />
+            android:src="@drawable/ic_baseline_arrow_back_24"/>
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tvRoom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Add Student Data"
-            android:textColor="@color/black"
-            android:textSize="25dp"
-            android:textStyle="italic"
+            android:text="Update Student Data"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/roomAddOrUpdateToolbar" />
+            app:layout_constraintTop_toBottomOf="@+id/roomAddOrUpdateToolbar"
+            android:textSize="25dp"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:textStyle="italic"/>
     </androidx.appcompat.widget.Toolbar>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/roomAddOrUpdateToolbar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/roomAddOrUpdateToolbar">
+        app:layout_constraintEnd_toEndOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -51,115 +50,101 @@
             <!--Name-->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/etNameAddDataLayout"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
                 android:layout_margin="20dp"
-                android:hint="Enter Name"
-                app:counterEnabled="true"
-                app:counterMaxLength="25"
-                app:endIconMode="clear_text"
-                app:layout_constraintTop_toTopOf="parent">
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:hint="Enter Name">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etRoomNameAddData"
+                    android:id="@+id/etRoomNameUpdateData"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="text"
-                    app:endIconMode="clear_text"
-                    android:maxLength="25" />
+                    android:inputType="text"/>
 
             </com.google.android.material.textfield.TextInputLayout>
             <!--PhoneNumber-->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/etPhoneAddDataLayout"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                app:endIconMode="clear_text"
-                android:hint="Enter PhoneNumber"
-                app:counterEnabled="true"
-                app:counterMaxLength="10"
-                app:layout_constraintEnd_toEndOf="@id/etNameAddDataLayout"
+                app:layout_constraintTop_toBottomOf="@id/etNameAddDataLayout"
                 app:layout_constraintStart_toStartOf="@id/etNameAddDataLayout"
-                app:layout_constraintTop_toBottomOf="@id/etNameAddDataLayout">
+                app:layout_constraintEnd_toEndOf="@id/etNameAddDataLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_margin="20dp"
+                android:hint="Enter PhoneNumber">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etRoomPhoneAddData"
+                    android:id="@+id/etRoomPhoneUpdateData"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="phone"
-                    android:maxLength="10" />
+                    android:inputType="phone"/>
 
             </com.google.android.material.textfield.TextInputLayout>
             <!--Email-->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/etEmailAddDataLayout"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:hint="Enter Email"
-                app:endIconMode="clear_text"
-                app:layout_constraintEnd_toEndOf="@id/etPhoneAddDataLayout"
+                app:layout_constraintTop_toBottomOf="@id/etPhoneAddDataLayout"
                 app:layout_constraintStart_toStartOf="@id/etPhoneAddDataLayout"
-                app:layout_constraintTop_toBottomOf="@id/etPhoneAddDataLayout">
+                app:layout_constraintEnd_toEndOf="@id/etPhoneAddDataLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_margin="20dp"
+                android:hint="Enter Email">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etRoomEmailAddData"
+                    android:id="@+id/etRoomEmailUpdateData"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textEmailAddress" />
+                    android:inputType="textEmailAddress"/>
 
             </com.google.android.material.textfield.TextInputLayout>
             <!--Course-->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/etCourseAddDataLayout"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                app:endIconMode="clear_text"
-                android:hint="Enter Course Name"
-                android:maxLength="25"
-                app:counterEnabled="true"
-                app:counterMaxLength="25"
-                app:layout_constraintEnd_toEndOf="@id/etEmailAddDataLayout"
+                app:layout_constraintTop_toBottomOf="@id/etEmailAddDataLayout"
                 app:layout_constraintStart_toStartOf="@id/etEmailAddDataLayout"
-                app:layout_constraintTop_toBottomOf="@id/etEmailAddDataLayout">
+                app:layout_constraintEnd_toEndOf="@id/etEmailAddDataLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_margin="20dp"
+                android:hint="Enter Course Name">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etRoomCourseAddData"
+                    android:id="@+id/etRoomCourseUpdateData"
                     android:layout_width="match_parent"
-                    android:maxLength="25"
                     android:layout_height="wrap_content"
-                    android:inputType="text" />
+                    android:inputType="text"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <Spinner
-                android:id="@+id/addGenderSpinnerRoom"
-                android:layout_width="match_parent"
+                android:id="@+id/updateGenderSpinnerRoom"
                 android:layout_height="?android:attr/actionBarSize"
-                android:layout_margin="20dp"
+                android:layout_width="match_parent"
                 android:background="@drawable/blue_outline"
-                app:layout_constraintEnd_toEndOf="@id/etCourseAddDataLayout"
+                app:layout_constraintTop_toBottomOf="@id/etCourseAddDataLayout"
                 app:layout_constraintStart_toStartOf="@id/etCourseAddDataLayout"
-                app:layout_constraintTop_toBottomOf="@id/etCourseAddDataLayout" />
+                app:layout_constraintEnd_toEndOf="@id/etCourseAddDataLayout"
+                android:layout_margin="20dp"
+                />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnAddDataRoom"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
-                android:background="@drawable/room_btn_gradiant"
-                android:text="Add Data"
+                android:text="Update Data"
+                app:layout_constraintTop_toBottomOf="@id/updateGenderSpinnerRoom"
+                app:layout_constraintStart_toStartOf="@id/updateGenderSpinnerRoom"
+                app:layout_constraintEnd_toEndOf="@id/updateGenderSpinnerRoom"
+                android:id="@+id/btnUpdateDataRoom"
                 android:textColor="@color/black"
                 app:backgroundTint="@null"
-                app:layout_constraintEnd_toEndOf="@id/addGenderSpinnerRoom"
-                app:layout_constraintStart_toStartOf="@id/addGenderSpinnerRoom"
-                app:layout_constraintTop_toBottomOf="@id/addGenderSpinnerRoom" />
+                android:background="@drawable/room_btn_gradiant"
+                android:layout_marginTop="50dp"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

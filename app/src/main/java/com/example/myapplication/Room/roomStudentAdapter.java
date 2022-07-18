@@ -65,12 +65,9 @@ public class roomStudentAdapter extends RecyclerView.Adapter<roomStudentAdapter.
             email = itemView.findViewById(R.id.tvEmailRoom);
             courseName = itemView.findViewById(R.id.tvCourseNameRoom);
             gender = itemView.findViewById(R.id.tvGenderRoom);
-            roomRecordDelete = itemView.findViewById(R.id.roomRecordDelete);
 
             itemView.setOnClickListener(view -> {
-
                 onclickAdapter.onclick(getAdapterPosition());
-                notifyItemRemoved(getAdapterPosition());
             });
         }
     }

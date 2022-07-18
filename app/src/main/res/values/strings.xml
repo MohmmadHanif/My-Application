@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">My Application 1</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="sort_and_filter">Sort and Filter</string>
@@ -26,8 +26,8 @@
     <string name="circle">Circle</string>
     <string name="rectangle">Rectangle</string>
     <string name="update_data">Update Data</string>
-    
-    
+
+
     <array name="gender">
         <item>Pick Any One</item>
         <item>Male</item>

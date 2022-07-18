@@ -45,6 +45,7 @@
         <entry key="app/src/main/res/layout/activity_recycle_view.xml" value="0.35585585585585583" />
         <entry key="app/src/main/res/layout/activity_room_main.xml" value="0.3140625" />
         <entry key="app/src/main/res/layout/activity_room_student_addor_update.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/activity_room_update.xml" value="0.18802083333333333" />
         <entry key="app/src/main/res/layout/activity_select_image.xml" value="0.3015625" />
         <entry key="app/src/main/res/layout/activity_show_image.xml" value="0.31614583333333335" />
         <entry key="app/src/main/res/layout/activity_sqlit_update.xml" value="0.28802083333333334" />
@@ -65,7 +66,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

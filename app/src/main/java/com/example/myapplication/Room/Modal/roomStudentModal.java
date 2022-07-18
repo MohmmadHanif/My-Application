@@ -8,8 +8,7 @@ import androidx.room.PrimaryKey;
 public class roomStudentModal {
 
     @PrimaryKey(autoGenerate = true)
-    public
-    int id;
+    public int id;
     @ColumnInfo(name = "name")
     public String name;
     @ColumnInfo(name = "phoneNumber")
@@ -21,7 +20,7 @@ public class roomStudentModal {
     @ColumnInfo(name = "gender")
     public String gender;
 
-    public roomStudentModal(String name, String phoneNumber, String email, String courseName, String gender) {
+    public roomStudentModal( String name, String phoneNumber, String email, String courseName, String gender) {
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.email = email;

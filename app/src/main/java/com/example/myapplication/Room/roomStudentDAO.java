@@ -17,12 +17,12 @@ public interface roomStudentDAO {
     @Insert
     void insert(roomStudentModal modal);
 
-    @Update
-    void update(roomStudentModal modal);
 
+    @Query("Delete From StudentDetail_tbl where id  = :id")
+    void deleteData(int id);
 
-    @Query("Delete From StudentDetail_tbl where name = :name")
-    void delete(String name);
+    @Query("Update StudentDetail_tbl set name = :name, phoneNumber = :phoneNumber , email = :email, courseName = :course, gender = :gender where id = :id")
+    void updateRecord(int id,String name, String phoneNumber, String email, String course, String gender);
 
     @Query("Select * from StudentDetail_tbl")
     List<roomStudentModal> getAllData();
