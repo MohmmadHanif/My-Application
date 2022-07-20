@@ -15,14 +15,15 @@ import com.example.myapplication.R;
 import com.example.myapplication.Room.Modal.roomStudentModal;
 import com.google.android.material.textview.MaterialTextView;
 import java.util.ArrayList;
+import java.util.List;
 
 public class roomStudentAdapter extends RecyclerView.Adapter<roomStudentAdapter.viewHolder>{
 
     onclickAdapter onclickAdapter;
     Context context;
-    ArrayList<roomStudentModal> modalArrayList;
+    List<roomStudentModal> modalArrayList;
 
-    public roomStudentAdapter(com.example.myapplication.Room.onclickAdapter onclickAdapter, Context context, ArrayList<roomStudentModal> modalArrayList) {
+    public roomStudentAdapter(com.example.myapplication.Room.onclickAdapter onclickAdapter, Context context, List<roomStudentModal> modalArrayList) {
         this.onclickAdapter = onclickAdapter;
         this.context = context;
         this.modalArrayList = modalArrayList;

@@ -1,12 +1,11 @@
 package com.example.myapplication.Room.Modal;
 
 import androidx.room.ColumnInfo;
-import androidx.room.DeleteColumn;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "StudentDetail_tbl")
-public class roomStudentModal {
+@Entity(tableName = "student")
+public class demoModal {
 
     @PrimaryKey(autoGenerate = true)
     public int id;
@@ -22,14 +21,13 @@ public class roomStudentModal {
     public String gender;
 
 
-
-
-    public roomStudentModal( String name, String phoneNumber, String email, String courseName, String gender) {
+    public demoModal(String name, String phoneNumber, String email, String courseName, String gender) {
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.email = email;
         this.courseName = courseName;
         this.gender = gender;
+
     }
 
     public int getId() {

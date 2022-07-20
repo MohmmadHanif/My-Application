@@ -15,11 +15,12 @@ import com.example.myapplication.Room.Modal.roomStudentModal;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class roomStudentMainActivity extends AppCompatActivity implements onclickAdapter {
 
     RecyclerView rvRoomShowData;
-    ArrayList<roomStudentModal> modalArrayList;
+    List<roomStudentModal> modalArrayList;
     roomStudentAdapter adapter;
     public static final String UPDATE_TAG = "boolean";
     private static final String NAME = "name";
@@ -56,9 +57,7 @@ public class roomStudentMainActivity extends AppCompatActivity implements onclic
     @Override
     protected void onResume() {
         super.onResume();
-
-        modalArrayList = new ArrayList<>();
-        modalArrayList = (ArrayList) dao.getAllData();
+        modalArrayList = dao.getAllData();
         adapter = new roomStudentAdapter(this, this, modalArrayList);
         rvRoomShowData.setAdapter(adapter);
     }

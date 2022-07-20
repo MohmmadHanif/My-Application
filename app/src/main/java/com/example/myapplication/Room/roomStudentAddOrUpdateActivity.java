@@ -137,7 +137,7 @@ public class roomStudentAddOrUpdateActivity extends AppCompatActivity {
                 String courses = roomStudentCourseName.getText().toString().trim();
                 String gender1s = addGenderSpinnerRoom.getSelectedItem().toString().trim();
 
-                if (names.isEmpty() || !names.matches("^[A-Za-z]+$")) {
+                if (names.isEmpty() || !names.matches("[a-zA-Z][a-zA-Z ]*")) {
                     roomStudentName.setError("Enter Valid Name");
                     roomStudentName.requestFocus();
                 } else if (names.length() < 3) {
@@ -162,7 +162,7 @@ public class roomStudentAddOrUpdateActivity extends AppCompatActivity {
                     Toast.makeText(roomStudentAddOrUpdateActivity.this, "Please Select Gender", Toast.LENGTH_SHORT).show();
                     addGenderSpinnerRoom.requestFocus();
                 } else {
-                    roomStudentModal modal = new roomStudentModal(names, phoneNumbers, emails, courses, gender1s);
+                    roomStudentModal modal = new roomStudentModal(names, phoneNumbers, emails, courses, gender1);
                     dao.insert(modal);
                     finish();
                 }
