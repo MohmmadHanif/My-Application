@@ -17,9 +17,11 @@
         <entry key="app/src/main/res/drawable/camera.xml" value="0.17" />
         <entry key="app/src/main/res/drawable/edittext_border.xml" value="0.1175" />
         <entry key="app/src/main/res/drawable/gradient_button.xml" value="0.184" />
+        <entry key="app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.2305" />
         <entry key="app/src/main/res/drawable/ic_baseline_image_24.xml" value="0.203" />
         <entry key="app/src/main/res/drawable/left_side_round_border.xml" value="0.168" />
         <entry key="app/src/main/res/drawable/line.xml" value="0.139" />
+        <entry key="app/src/main/res/drawable/post_api_btn.xml" value="0.2305" />
         <entry key="app/src/main/res/drawable/right_side_carve_border.xml" value="0.15" />
         <entry key="app/src/main/res/drawable/room_btn_gradiant.xml" value="0.2195" />
         <entry key="app/src/main/res/drawable/round_border.xml" value="0.1065" />
@@ -31,9 +33,11 @@
         <entry key="app/src/main/res/drawable/shape_2.xml" value="0.1075" />
         <entry key="app/src/main/res/drawable/shape_3.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/simple_border.xml" value="0.1075" />
+        <entry key="app/src/main/res/drawable/spinner_style.xml" value="0.25" />
         <entry key="app/src/main/res/drawable/style.xml" value="0.139" />
         <entry key="app/src/main/res/drawable/tabselected.xml" value="0.1435" />
         <entry key="app/src/main/res/layout/activity_a.xml" value="0.21" />
+        <entry key="app/src/main/res/layout/activity_api_main.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_b.xml" value="0.28802083333333334" />
         <entry key="app/src/main/res/layout/activity_canvas_demo.xml" value="0.28802083333333334" />
         <entry key="app/src/main/res/layout/activity_canvas_first.xml" value="0.29814814814814816" />
@@ -41,6 +45,8 @@
         <entry key="app/src/main/res/layout/activity_fregment_lifecycle.xml" value="0.24094202898550723" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.15572916666666667" />
         <entry key="app/src/main/res/layout/activity_polymorphisum.xml" value="0.15476190476190477" />
+        <entry key="app/src/main/res/layout/activity_post_api_calling_actvity.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_post_to_get_data.xml" value="0.5" />
         <entry key="app/src/main/res/layout/activity_product_filter.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_recycle_view.xml" value="0.35585585585585583" />
         <entry key="app/src/main/res/layout/activity_room_main.xml" value="0.3140625" />
@@ -51,11 +57,13 @@
         <entry key="app/src/main/res/layout/activity_sqlit_update.xml" value="0.28802083333333334" />
         <entry key="app/src/main/res/layout/activity_sqlite_add_data.xml" value="0.3469945355191257" />
         <entry key="app/src/main/res/layout/activity_sqlite_main.xml" value="0.3140625" />
+        <entry key="app/src/main/res/layout/api_item_layout.xml" value="0.67" />
         <entry key="app/src/main/res/layout/filter_interests_item_view.xml" value="0.2869791666666667" />
         <entry key="app/src/main/res/layout/first_fragment.xml" value="0.28802083333333334" />
         <entry key="app/src/main/res/layout/fragment_2.xml" value="0.19010416666666666" />
         <entry key="app/src/main/res/layout/fragment_blank.xml" value="0.24094202898550723" />
         <entry key="app/src/main/res/layout/fragment_third.xml" value="0.28802083333333334" />
+        <entry key="app/src/main/res/layout/posted_data_get_layout.xml" value="0.31302083333333336" />
         <entry key="app/src/main/res/layout/read_data_sqlite_layout.xml" value="0.2869791666666667" />
         <entry key="app/src/main/res/layout/recycle_item.xml" value="0.2869791666666667" />
         <entry key="app/src/main/res/layout/recycle_item_view.xml" value="0.25" />
@@ -63,6 +71,7 @@
         <entry key="app/src/main/res/layout/room_student_show_item.xml" value="0.1" />
         <entry key="app/src/main/res/layout/second_fragment.xml" value="0.12760416666666666" />
         <entry key="app/src/main/res/layout/shape_2.xml" value="0.2869791666666667" />
+        <entry key="app/src/main/res/menu/post_activity_menu.xml" value="0.31302083333333336" />
       </map>
     </option>
   </component>

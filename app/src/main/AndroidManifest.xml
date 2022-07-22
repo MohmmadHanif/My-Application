@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.myapplication">
 
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -24,7 +25,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
-
+        <activity
+            android:name=".ApiCalling.PostApi.PostToGetDataActivity"
+            android:theme="@style/Theme.Material3.Light"
+            android:exported="false" />
+        <activity
+            android:name=".ApiCalling.PostApi.PostApiCallingActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Material3.Light" />
+        <activity
+            android:name=".ApiCalling.GetApi.ApiCallingActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light" />
         <activity
             android:name=".Room.roomStudentAddOrUpdateActivity"
             android:exported="false"
@@ -39,7 +51,7 @@
         <activity
             android:name=".Sqlite.SqliteMainActivity"
             android:exported="false"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".Sqlite.SqliteAddDataActivity"
             android:exported="false" />

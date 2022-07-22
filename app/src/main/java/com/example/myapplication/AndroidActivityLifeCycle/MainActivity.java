@@ -8,6 +8,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.myapplication.ApiCalling.GetApi.ApiCallingActivity;
+import com.example.myapplication.ApiCalling.PostApi.PostToGetDataActivity;
 import com.example.myapplication.Canvas.CanvasFirstActivity;
 import com.example.myapplication.ConstraintLayoutAndRecycleView.ProductListActivity;
 import com.example.myapplication.R;
@@ -29,11 +31,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button canvasDemoBtn = findViewById(R.id.canvasDemo);
         Button sqliteDemo = findViewById(R.id.sqliteDemo);
         Button roomDemo = findViewById(R.id.roomDemo);
+        Button apiDemo = findViewById(R.id.apiDemo);
+        Button postApiDemo = findViewById(R.id.postApiDemo);
 
         constraintLayoutDemoBtn.setOnClickListener(this);
         canvasDemoBtn.setOnClickListener(this);
         sqliteDemo.setOnClickListener(this);
         roomDemo.setOnClickListener(this);
+        apiDemo.setOnClickListener(this);
+        postApiDemo.setOnClickListener(this);
 
     }
 
@@ -51,6 +57,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(new Intent(this, SqliteMainActivity.class));
         }else if (v.getId() == R.id.roomDemo) {
             startActivity(new Intent(this, roomStudentMainActivity.class));
+        }else if (v.getId() == R.id.apiDemo) {
+            startActivity(new Intent(this, ApiCallingActivity.class));
+        }else if (v.getId() == R.id.postApiDemo) {
+            startActivity(new Intent(this, PostToGetDataActivity.class));
         }
     }
 

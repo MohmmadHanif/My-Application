@@ -18,26 +18,30 @@ import com.example.myapplication.Room.Modal.demoModal;
 import com.example.myapplication.Room.Modal.roomStudentModal;
 
 @Database(entities = {roomStudentModal.class},
-        version = 3,
-        autoMigrations = {@AutoMigration(from = 2,to = 3,spec = roomStudentDatabase.MyAutoMigration.class)}
-        )
+        version = 1/*,
+        autoMigrations = {@AutoMigration(from = 3,to = 4,spec = roomStudentDatabase.MyAutoMigration.class)}
+        */)
 public abstract class roomStudentDatabase extends RoomDatabase {
     public abstract roomStudentDAO roomDAO();
 
     @DeleteColumn(tableName = "StudentDetail_tbl",columnName = "age")
     static class MyAutoMigration implements AutoMigrationSpec {
     }
+/*
     static Migration MIGRATION_1_2 = new Migration(1, 2) {
         @Override
         public void migrate(SupportSQLiteDatabase database) {
 
             database.execSQL("ALTER TABLE StudentDetail_tbl ADD COLUMN age TEXT DEFAULT '21'");
-           /* database.execSQL("CREATE TABLE student (id INTEGER PRIMARY KEY NOT NULL,name TEXT NOT NULL, phoneNumber TEXT NOT NULL, email TEXT NOT NULL, courseName TEXT NOT NULL, gender TEXT NOT NULL)");
+           */
+/* database.execSQL("CREATE TABLE student (id INTEGER PRIMARY KEY NOT NULL,name TEXT NOT NULL, phoneNumber TEXT NOT NULL, email TEXT NOT NULL, courseName TEXT NOT NULL, gender TEXT NOT NULL)");
             database.execSQL("INSERT INTO student (id, name, phoneNumber,email,courseName,gender) SELECT id,name, phoneNumber,email,courseName,gender FROM StudentDetail_tbl");
             database.execSQL("DROP TABLE StudentDetail_tbl");
-            database.execSQL("ALTER TABLE student RENAME TO StudentDetail_tbl");*/
+            database.execSQL("ALTER TABLE student RENAME TO StudentDetail_tbl");*//*
+
         }
     };
+*/
     /*static Migration MIGRATION_2_3 = new Migration(2, 3) {
         @Override
         public void migrate(SupportSQLiteDatabase database) {
@@ -59,7 +63,7 @@ public abstract class roomStudentDatabase extends RoomDatabase {
         if (instance == null) {
             instance = Room.databaseBuilder(context.getApplicationContext(),
                             roomStudentDatabase.class, "StudentData.db")
-                    .addMigrations(MIGRATION_1_2/*,MIGRATION_2_3*/)
+                    //.addMigrations(MIGRATION_1_2/*,MIGRATION_2_3*/)
                     .allowMainThreadQueries()
                     .build();
         }

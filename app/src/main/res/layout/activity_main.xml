@@ -33,5 +33,17 @@
         android:layout_height="wrap_content"
         android:text="Room Demo"/>
 
+    <Button
+        android:id="@+id/apiDemo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Api Demo"/>
+
+    <Button
+        android:id="@+id/postApiDemo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Post Api Demo"/>
+
 
 </LinearLayout>

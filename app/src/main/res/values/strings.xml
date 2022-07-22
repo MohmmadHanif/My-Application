@@ -26,11 +26,15 @@
     <string name="circle">Circle</string>
     <string name="rectangle">Rectangle</string>
     <string name="update_data">Update Data</string>
+    <string name="Hanif">Hanif</string>
+    <string name="post_data">Post Data</string>
+    <string name="email">Email</string>
+    <string name="name">Name</string>
 
-
-    <array name="gender">
+    <string-array name="gender">
         <item>Pick Any One</item>
         <item>Male</item>
         <item>Female</item>
-    </array>
+        <item>Other</item>
+    </string-array>
 </resources>
