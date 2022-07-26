@@ -5,7 +5,7 @@
     android:id="@+id/consLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Canvas.CanvasFirstActivity">
+    tools:context=".canvas.CanvasFirstActivity">
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnClear"

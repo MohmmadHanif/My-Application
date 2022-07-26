@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/DarkGray"
     android:paddingVertical="10dp"
-    tools:context=".Sqlite.SqliteMainActivity">
+    tools:context=".sqlite.SqliteMainActivity">
 
 
     <androidx.appcompat.widget.Toolbar
@@ -45,7 +45,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/toolbar"
-        tools:listitem="@layout/read_data_sqlite_layout" />
+        tools:listitem="@layout/item_read_data_sqlite_layout" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btnSqliteAddData"

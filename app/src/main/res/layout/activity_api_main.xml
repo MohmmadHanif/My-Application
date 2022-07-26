@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ApiCalling.GetApi.ApiCallingActivity">
+    tools:context=".apicalling.getapicaliing.ApiCallingActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvApi"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/api_item_layout"/>
+        tools:listitem="@layout/item_getapi_layout"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

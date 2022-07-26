@@ -20,62 +20,63 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
+        android:name=".AppClass"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
-            android:name=".ApiCalling.PostApi.PostToGetDataActivity"
+            android:name=".apicalling.apicallingcrud.ApiCallingShowDataActivity"
             android:theme="@style/Theme.Material3.Light"
             android:exported="false" />
         <activity
-            android:name=".ApiCalling.PostApi.PostApiCallingActivity"
+            android:name=".apicalling.apicallingcrud.PostAndPutApiCallingActivity"
             android:exported="false"
             android:theme="@style/Theme.Material3.Light" />
         <activity
-            android:name=".ApiCalling.GetApi.ApiCallingActivity"
+            android:name=".apicalling.getapicaliing.ApiCallingActivity"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light" />
         <activity
-            android:name=".Room.roomStudentAddOrUpdateActivity"
+            android:name=".room.roomStudentAddOrUpdateActivity"
             android:exported="false"
             android:theme="@style/theme1" />
         <activity
-            android:name=".Room.roomStudentMainActivity"
+            android:name=".room.roomStudentMainActivity"
             android:exported="false"
             android:theme="@style/theme1" />
         <activity
-            android:name=".Sqlite.SqliteUpdateActivity"
+            android:name=".sqlite.SqliteUpdateActivity"
             android:exported="false" />
         <activity
-            android:name=".Sqlite.SqliteMainActivity"
+            android:name=".sqlite.SqliteMainActivity"
             android:exported="false"
             android:screenOrientation="fullSensor" />
         <activity
-            android:name=".Sqlite.SqliteAddDataActivity"
+            android:name=".sqlite.SqliteAddDataActivity"
             android:exported="false" />
         <activity
-            android:name=".ConstraintLayoutAndRecycleView.ProductListActivity"
+            android:name=".constraintlayoutandrecycleview.ProductListActivity"
             android:exported="false" />
         <activity
-            android:name=".ConstraintLayoutAndRecycleView.ProductFilterActivity"
+            android:name=".constraintlayoutandrecycleview.ProductFilterActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Fregment.Fregment_lifecycle"
+            android:name=".fregment.Fregment_lifecycle"
             android:exported="false" />
         <activity
-            android:name=".CameraAndGallery.ShowImageActivity"
+            android:name=".cameraandgallery.ShowImageActivity"
             android:exported="false" />
         <activity
-            android:name=".Task.secondActivity"
+            android:name=".task.secondActivity"
             android:exported="false" />
         <activity
-            android:name=".CameraAndGallery.SelectImageActivity"
+            android:name=".cameraandgallery.SelectImageActivity"
             android:exported="false" />
         <activity
-            android:name=".AndroidActivityLifeCycle.MainActivity"
+            android:name=".androidactivitylifecycle.MainActivity"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -85,21 +86,21 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Canvas.CanvasFirstActivity"
+            android:name=".canvas.CanvasFirstActivity"
             android:exported="false" />
         <activity
-            android:name=".DemoOOPS.Polymorphisum"
+            android:name=".demooops.Polymorphisum"
             android:exported="false" />
         <activity
-            android:name=".DemoOOPS.Encapsulation"
+            android:name=".demooops.Encapsulation"
             android:exported="false"
             tools:ignore="MissingClass" />
         <activity
-            android:name=".AndroidActivityLifeCycle.A2"
+            android:name=".androidactivitylifecycle.A2"
             android:exported="false"
             tools:ignore="MissingClass" />
         <activity
-            android:name=".Task.firstActivity"
+            android:name=".task.firstActivity"
             android:exported="false" />
 
         <meta-data

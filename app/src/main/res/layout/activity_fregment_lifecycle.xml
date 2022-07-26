@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fregment.Fregment_lifecycle">
+    tools:context=".fregment.Fregment_lifecycle">
 
     <androidx.fragment.app.FragmentContainerView
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/fragment_container_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:name="com.example.myapplication.Fregment.FirstFragment" />
+        android:name="com.example.myapplication.fregment.FirstFragment" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

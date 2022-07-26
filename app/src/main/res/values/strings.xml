@@ -30,11 +30,15 @@
     <string name="post_data">Post Data</string>
     <string name="email">Email</string>
     <string name="name">Name</string>
+    <string name="are_you_sure_you_want_to_delete">Are You Sure You Want To Delete ?</string>
+    <string name="edit">Edit</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
 
     <string-array name="gender">
         <item>Pick Any One</item>
         <item>Male</item>
         <item>Female</item>
-        <item>Other</item>
+        <!--<item>Other</item>-->
     </string-array>
 </resources>
