@@ -13,7 +13,7 @@ public class Utils {
     private static ProgressDialog progressDialog;
 
     public static void showToast(String message) {
-        Toast.makeText(AppClass.context, message, Toast.LENGTH_SHORT).show();
+        Toast.makeText(AppClass.context, message, Toast.LENGTH_LONG).show();
     }
 
     public static void initProgressDialog(Context context, String massage) {

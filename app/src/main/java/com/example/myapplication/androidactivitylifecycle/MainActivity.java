@@ -10,6 +10,8 @@ import android.widget.Button;
 
 import com.example.myapplication.apicalling.getapicaliing.ApiCallingActivity;
 import com.example.myapplication.apicalling.apicallingcrud.ApiCallingShowDataActivity;
+import com.example.myapplication.apicalling.getapiwithpagination.MovieMainActivity;
+import com.example.myapplication.apicalling.getapiwithpagination.modals.MovieListResultModal;
 import com.example.myapplication.canvas.CanvasFirstActivity;
 import com.example.myapplication.constraintlayoutandrecycleview.ProductListActivity;
 import com.example.myapplication.R;
@@ -33,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button roomDemo = findViewById(R.id.roomDemo);
         Button apiDemo = findViewById(R.id.apiDemo);
         Button postApiDemo = findViewById(R.id.apiCrudDemo);
+        Button apiPagination = findViewById(R.id.apiPagination);
 
         constraintLayoutDemoBtn.setOnClickListener(this);
         canvasDemoBtn.setOnClickListener(this);
@@ -40,6 +43,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         roomDemo.setOnClickListener(this);
         apiDemo.setOnClickListener(this);
         postApiDemo.setOnClickListener(this);
+        apiPagination.setOnClickListener(this);
 
     }
 
@@ -61,6 +65,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(new Intent(this, ApiCallingActivity.class));
         }else if (v.getId() == R.id.apiCrudDemo) {
             startActivity(new Intent(this, ApiCallingShowDataActivity.class));
+        }else if (v.getId() == R.id.apiPagination) {
+            startActivity(new Intent(this, MovieMainActivity.class));
         }
     }
 

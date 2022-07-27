@@ -21,7 +21,7 @@ public class roomStudentAdapter extends RecyclerView.Adapter<roomStudentAdapter.
     Context context;
     List<roomStudentModal> modalArrayList;
 
-    public roomStudentAdapter(com.example.myapplication.room.onclickAdapter onclickAdapter, Context context, List<roomStudentModal> modalArrayList) {
+    public roomStudentAdapter(onclickAdapter onclickAdapter, Context context, List<roomStudentModal> modalArrayList) {
         this.onclickAdapter = onclickAdapter;
         this.context = context;
         this.modalArrayList = modalArrayList;
@@ -55,7 +55,6 @@ public class roomStudentAdapter extends RecyclerView.Adapter<roomStudentAdapter.
         private final MaterialTextView email;
         private final MaterialTextView courseName;
         private final MaterialTextView gender;
-        ImageView roomRecordDelete;
         public viewHolder(@NonNull View itemView) {
             super(itemView);
 

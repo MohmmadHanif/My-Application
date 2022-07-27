@@ -10,6 +10,8 @@ import android.widget.Toast;
 
 import com.example.myapplication.apicalling.getapicaliing.Adapter.apiAdapter;
 import com.example.myapplication.R;
+import com.example.myapplication.apicalling.getapicaliing.Modals.BaseResponseModel;
+import com.example.myapplication.apicalling.getapicaliing.Modals.UserDataResp;
 
 import java.util.ArrayList;
 

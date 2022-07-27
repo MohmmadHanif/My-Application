@@ -43,7 +43,7 @@ public class PostAndPutApiCallingActivity extends AppCompatActivity {
         MaterialTextView tvPostData = findViewById(R.id.tvPostData);
         edName = findViewById(R.id.edNamePostApi);
         edEmail = findViewById(R.id.edEmailPostApi);
-        Spinner spPostApi = findViewById(R.id.spPostApi);
+        Spinner spGenderPostApi = findViewById(R.id.spPostApi);
         AppCompatButton btnPostData = findViewById(R.id.btnPostData);
         isUpdate = getIntent().getBooleanExtra(UPDATE_TAG, false);
         apiInterface = ApiCallingInstance.getPostInstance().create(ApiCallingInterface.class);
@@ -57,13 +57,13 @@ public class PostAndPutApiCallingActivity extends AppCompatActivity {
             id = modal.getId();
             edEmail.setText(email);
             edName.setText(name);
-            spPostApi.setSelection(getIndex(spPostApi, gender));
+            spGenderPostApi.setSelection(getIndex(spGenderPostApi, gender));
         }
 
         btnPostData.setOnClickListener(view -> {
             String name = edName.getText().toString();
             String email = edEmail.getText().toString().trim();
-            String gender = spPostApi.getSelectedItem().toString().trim();
+            String gender = spGenderPostApi.getSelectedItem().toString().trim();
             if (checkValidation(name, email, gender)) {
                 addValue(name, email, gender);
             }
@@ -97,9 +97,9 @@ public class PostAndPutApiCallingActivity extends AppCompatActivity {
         });
     }
 
-    private boolean checkValidation(String name, String email, String gender) {
+    private boolean checkValidation(String name, String email, String gender){
         if (name.isEmpty()) {
-            edName.setError("Name Field Can't Be!!");
+            edName.setError("Name Field Can't Be Empty!!");
             edName.requestFocus();
             return false;
         } else if (!name.matches("[a-zA-Z][a-zA-Z ]*")) {
@@ -107,16 +107,15 @@ public class PostAndPutApiCallingActivity extends AppCompatActivity {
             edName.requestFocus();
             return false;
         } else if (email.isEmpty()) {
-            edEmail.setError("Email Field Can't Be!!");
+            edEmail.setError("Email Field Can't Be Empty !!");
             edEmail.requestFocus();
             return false;
         } else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            edEmail.setError("Email Field Can't Be!!");
+            edEmail.setError("Please Enter Valid Email!");
             edEmail.requestFocus();
             return false;
         }else if (gender.matches("Pick Any One")) {
-            edEmail.setError("Email Field Can't Be!!");
-            edEmail.requestFocus();
+           Utils.showToast("Please Select Gender");
             return false;
         }
         return true;

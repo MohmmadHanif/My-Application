@@ -1,4 +1,4 @@
-package com.example.myapplication.apicalling.getapicaliing;
+package com.example.myapplication.apicalling.getapicaliing.Modals;
 
 import java.util.ArrayList;
 

@@ -45,5 +45,11 @@
         android:layout_height="wrap_content"
         android:text="Api CRUD Demo"/>
 
+    <Button
+        android:id="@+id/apiPagination"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Api Pagination Demo"/>
+
 
 </LinearLayout>
