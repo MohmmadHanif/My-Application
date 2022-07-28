@@ -19,7 +19,6 @@ import java.util.ArrayList;
 public class SqliteMainActivity extends AppCompatActivity {
 
     DataBaseHelper dataBaseHelper;
-    TextView tvEmpty;
     ArrayList<SqliteModal> list;
     RecyclerView rvShowAllData;
 
@@ -33,7 +32,7 @@ public class SqliteMainActivity extends AppCompatActivity {
 
         FloatingActionButton btnAddDataSqlite = findViewById(R.id.btnSqliteAddData);
         rvShowAllData = findViewById(R.id.rvShowSqlData);
-        tvEmpty = findViewById(R.id.tvEmpty);
+
         dataBaseHelper = new DataBaseHelper(SqliteMainActivity.this);
         list = new ArrayList<>();
 
@@ -52,13 +51,9 @@ public class SqliteMainActivity extends AppCompatActivity {
         super.onResume();
 
         list = dataBaseHelper.readAllData();
-        if (list.size() == 0) {
-            tvEmpty.setVisibility(View.VISIBLE);
-        } else {
-            tvEmpty.setVisibility(View.GONE);
-            ReadDataSqliteAdapter adapter = new ReadDataSqliteAdapter(list, SqliteMainActivity.this);
-            rvShowAllData.setAdapter(adapter);
-        }
+        ReadDataSqliteAdapter adapter = new ReadDataSqliteAdapter(list, SqliteMainActivity.this);
+        rvShowAllData.setAdapter(adapter);
+
     }
 
     @Override

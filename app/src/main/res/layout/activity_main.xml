@@ -52,4 +52,11 @@
         android:text="Api Pagination Demo"/>
 
 
+    <Button
+        android:id="@+id/jsonParsing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Json Parsing Demo"/>
+
+
 </LinearLayout>

@@ -1,0 +1,399 @@
+[
+    {
+        "productId" : "1",
+        "productName" : "Apple- Best of Himalaya's",
+        "productPrice" : "100",
+        "productDescription" : "The apple is a pome (fleshy) fruit, in which the ripened ovary and surrounding tissue both become fleshy and edible.",
+        "productType" : "fruit",
+        "productImage" : "https://tiimg.tistatic.com/fp/1/007/521/wholesale-price-100-natural-and-organic-red-fresh-kasmiri-apple-fruit-231-w410.jpg",
+        "productRating" : 4 , 
+        "productQuantity" : "1 KG"
+    },
+    {
+        "productId" : "2",
+        "productName" : "Brown eggs",
+        "productPrice" : "250",
+        "productDescription" : "The Brown eggs are bigger in size and the yolk of the egg is darker than the white variant",
+        "productType" : "Non Vegetable",
+        "productImage" : "https://www.omegafoods.in/upload_product/4243_19052020143359000000_brown_eggs_in_brown_carton__isolated.jpg",
+        "productRating" : 4.9, 
+        "productQuantity" : "6 Pcs"
+    },
+    {
+        "productId" : "3",
+        "productName" : "Sweet fresh stawberry",
+        "productPrice" : "400",
+        "productDescription" : "Sweet fresh stawberry on the wooden table",
+        "productType" : "fruit",
+        "productImage" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsnTGkAdwuXJd3JRFpEPDeuqt3L48Gxijqep9J-59WlUGDSXcfSNRhexIY1dxSWsurT3U&usqp=CAU",
+        "productRating" : 4 , 
+        "productQuantity" : "1 KG"
+    },
+    {
+        "productId" : "4",
+        "productName" : "Homemade bread",
+        "productPrice" : "50",
+        "productDescription" : "Homemade bread is fluffy, tender, and way better than store-bought loaves.",
+        "productType" : "bakery",
+        "productImage" : "https://cdn.shopify.com/s/files/1/1382/5319/products/download_b35f203f-4290-47a6-9e90-93fe2dc7df11_225x225.jpg?v=1635927118",
+        "productRating" : 5 , 
+        "productQuantity" : "500 G"
+    },
+    {
+        "productId" : "5",
+        "productName" : "Fresh tomato",
+        "productPrice" : "60",
+        "productDescription" : "They are usually red, scarlet, or yellow, though green and purple varieties do exist, and they vary in shape from almost spherical to oval and elongate to pear-shaped.",
+        "productType" : "vegetable",
+        "productImage" : "https://3.imimg.com/data3/HW/PX/MY-13965488/fresh-tomato-250x250.jpg",
+        "productRating" : 5 , 
+        "productQuantity" : "1 KG"
+    },
+    {
+        "productId" : "6",
+        "productName" : "Oranges",
+        "productPrice" : "100",
+        "productDescription" : "The orange is a usually round or oval citrus; its rind and flesh are generally orange, except the varieties of red pulp",
+        "productType" : "fruit",
+        "productImage" : "https://assets.wakefern.com/is/image/wakefern/801956026?$Mi9Product_cell$",
+        "productRating" : 3.8 , 
+        "productQuantity" : "500 G"
+    },
+    {
+        "productId" : "7",
+        "productName" : "Honey",
+        "productPrice" : "100",
+        "productDescription" : "honey, sweet, viscous liquid food, dark golden in colour, produced in the honey sacs of various bees from the nectar of flowers.",
+        "productType" : "bakery",
+        "productImage" : "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=225/app/images/products/sliding_image/16761a.jpg?ts=1628077742",
+        "productRating" : 5 , 
+        "productQuantity" : "100 G"
+    },
+    {
+        "productId" : "8",
+        "productName" : "Amul Cheese",
+        "productPrice" : "200",
+        "productDescription" : "Amul cheese is a hard, canned cheese that tastes like cheddar with a plot twist",
+        "productType" : "dairy",
+        "productImage" : "https://greeno.greensynglobal.com/wp-content/uploads/2020/08/amul-cheese-1-kg.jpg",
+        "productRating" : 4.5 , 
+        "productQuantity" : "10 Pcs"
+    },
+    {
+        "productId" : "9",
+        "productName" : "Corn",
+        "productPrice" : "30",
+        "productDescription" : "Corn is a tall annual cereal grass (Zea mays) that is widely grown for its large elongated ears of starchy seeds",
+        "productType" : "vegetable",
+        "productImage" : "https://tiimg.tistatic.com/fp/1/004/817/high-nutritions-baby-corn-176-w300.jpg",
+        "productRating" : 3 , 
+        "productQuantity" : "1 KG"
+    },
+    {
+        "productId" : "10",
+        "productName" : "Best Milk Toast",
+        "productPrice" : "40",
+        "productDescription" : "Milk toast is a breakfast dish consisting of toasted bread in warm milk, typically with sugar and butter",
+        "productType" : "bakery",
+        "productImage" : "https://m.media-amazon.com/images/I/81L3TILrfwL._SL1500_.jpg",
+        "productRating" : 4 , 
+        "productQuantity" : "250 G"
+    },
+    {
+        "productId" : "11",
+        "productName" : "Apple- Best of Himalaya's",
+        "productPrice" : "100",
+        "productDescription" : "The apple is a pome (fleshy) fruit, in which the ripened ovary and surrounding tissue both become fleshy and edible.",
+        "productType" : "fruit",
+        "productImage" : "https://tiimg.tistatic.com/fp/1/007/521/wholesale-price-100-natural-and-organic-red-fresh-kasmiri-apple-fruit-231-w410.jpg",
+        "productRating" : 4 , 
+        "productQuantity" : "1 KG"
+    },
+    {
+        "productId" : "12",
+        "productName" : "Brown eggs",
+        "productPrice" : "250",
+        "productDescription" : "The Brown eggs are bigger in size and the yolk of the egg is darker than the white variant",
+        "productType" : "Non Vegetable",
+        "productImage" : "https://www.omegafoods.in/upload_product/4243_19052020143359000000_brown_eggs_in_brown_carton__isolated.jpg",
+        "productRating" : 4.9, 
+        "productQuantity" : "6 Pcs"
+    },
+    {
+        "productId" : "13",
+        "productName" : "Sweet fresh stawberry",
+        "productPrice" : "400",
+        "productDescription" : "Sweet fresh stawberry on the wooden table",
+        "productType" : "fruit",
+        "productImage" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsnTGkAdwuXJd3JRFpEPDeuqt3L48Gxijqep9J-59WlUGDSXcfSNRhexIY1dxSWsurT3U&usqp=CAU",
+        "productRating" : 4 , 
+        "productQuantity" : "1 KG"
+    },
+    {
+        "productId" : "14",
+        "productName" : "Homemade bread",
+        "productPrice" : "50",
+        "productDescription" : "Homemade bread is fluffy, tender, and way better than store-bought loaves.",
+        "productType" : "bakery",
+        "productImage" : "https://cdn.shopify.com/s/files/1/1382/5319/products/download_b35f203f-4290-47a6-9e90-93fe2dc7df11_225x225.jpg?v=1635927118",        "productRating" : 5 ,
+        "productQuantity" : "500 G"
+    },
+    {
+        "productId" : "15",
+        "productName" : "Fresh tomato",
+        "productPrice" : "60",
+        "productDescription" : "They are usually red, scarlet, or yellow, though green and purple varieties do exist, and they vary in shape from almost spherical to oval and elongate to pear-shaped.",
+        "productType" : "vegetable",
+        "productImage" : "https://3.imimg.com/data3/HW/PX/MY-13965488/fresh-tomato-250x250.jpg",
+        "productRating" : 5 , 
+        "productQuantity" : "1 KG"
+    },
+    {
+        "productId" : "16",
+        "productName" : "Oranges",
+        "productPrice" : "100",
+        "productDescription" : "The orange is a usually round or oval citrus; its rind and flesh are generally orange, except the varieties of red pulp",
+        "productType" : "fruit",
+        "productImage" : "https://assets.wakefern.com/is/image/wakefern/801956026?$Mi9Product_cell$",
+        "productRating" : 3.8 , 
+        "productQuantity" : "500 G"
+    },
+    {
+        "productId" : "17",
+        "productName" : "Honey",
+        "productPrice" : "100",
+        "productDescription" : "honey, sweet, viscous liquid food, dark golden in colour, produced in the honey sacs of various bees from the nectar of flowers.",
+        "productType" : "bakery",
+        "productImage" : "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=225/app/images/products/sliding_image/16761a.jpg?ts=1628077742",
+        "productRating" : 5 , 
+        "productQuantity" : "100 G"
+    },
+    {
+        "productId" : "18",
+        "productName" : "Amul Cheese",
+        "productPrice" : "200",
+        "productDescription" : "Amul cheese is a hard, canned cheese that tastes like cheddar with a plot twist",
+        "productType" : "dairy",
+        "productImage" : "https://greeno.greensynglobal.com/wp-content/uploads/2020/08/amul-cheese-1-kg.jpg",
+        "productRating" : 4.5 , 
+        "productQuantity" : "10 Pcs"
+    },
+    {
+        "productId" : "19",
+        "productName" : "Corn",
+        "productPrice" : "30",
+        "productDescription" : "Corn is a tall annual cereal grass (Zea mays) that is widely grown for its large elongated ears of starchy seeds",
+        "productType" : "vegetable",
+        "productImage" : "https://tiimg.tistatic.com/fp/1/004/817/high-nutritions-baby-corn-176-w300.jpg",
+        "productRating" : 3 , 
+        "productQuantity" : "1 KG"
+    },
+    {
+        "productId" : "20",
+        "productName" : "Best Milk Toast",
+        "productPrice" : "40",
+        "productDescription" : "Milk toast is a breakfast dish consisting of toasted bread in warm milk, typically with sugar and butter",
+        "productType" : "bakery",
+        "productImage" : "https://m.media-amazon.com/images/I/81L3TILrfwL._SL1500_.jpg",
+        "productRating" : 4 , 
+        "productQuantity" : "250 G"
+    },{
+        "productId" : "21",
+        "productName" : "Apple- Best of Himalaya's",
+        "productPrice" : "100",
+        "productDescription" : "The apple is a pome (fleshy) fruit, in which the ripened ovary and surrounding tissue both become fleshy and edible.",
+        "productType" : "fruit",
+        "productImage" : "https://tiimg.tistatic.com/fp/1/007/521/wholesale-price-100-natural-and-organic-red-fresh-kasmiri-apple-fruit-231-w410.jpg",
+        "productRating" : 4 , 
+        "productQuantity" : "1 KG"
+    },
+    {
+        "productId" : "22",
+        "productName" : "Brown eggs",
+        "productPrice" : "250",
+        "productDescription" : "The Brown eggs are bigger in size and the yolk of the egg is darker than the white variant",
+        "productType" : "Non Vegetable",
+        "productImage" : "https://www.omegafoods.in/upload_product/4243_19052020143359000000_brown_eggs_in_brown_carton__isolated.jpg",
+        "productRating" : 4.9, 
+        "productQuantity" : "6 Pcs"
+    },
+    {
+        "productId" : "23",
+        "productName" : "Sweet fresh stawberry",
+        "productPrice" : "400",
+        "productDescription" : "Sweet fresh stawberry on the wooden table",
+        "productType" : "fruit",
+        "productImage" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsnTGkAdwuXJd3JRFpEPDeuqt3L48Gxijqep9J-59WlUGDSXcfSNRhexIY1dxSWsurT3U&usqp=CAU",
+        "productRating" : 4 , 
+        "productQuantity" : "1 KG"
+    },
+    {
+        "productId" : "24",
+        "productName" : "Homemade bread",
+        "productPrice" : "50",
+        "productDescription" : "Homemade bread is fluffy, tender, and way better than store-bought loaves.",
+        "productType" : "bakery",
+        "productImage" : "https://cdn.shopify.com/s/files/1/1382/5319/products/download_b35f203f-4290-47a6-9e90-93fe2dc7df11_225x225.jpg?v=1635927118",        "productRating" : 5 ,
+        "productQuantity" : "500 G"
+    },
+    {
+        "productId" : "25",
+        "productName" : "Fresh tomato",
+        "productPrice" : "60",
+        "productDescription" : "They are usually red, scarlet, or yellow, though green and purple varieties do exist, and they vary in shape from almost spherical to oval and elongate to pear-shaped.",
+        "productType" : "vegetable",
+        "productImage" : "https://3.imimg.com/data3/HW/PX/MY-13965488/fresh-tomato-250x250.jpg",
+        "productRating" : 5 , 
+        "productQuantity" : "1 KG"
+    },
+    {
+        "productId" : "26",
+        "productName" : "Oranges",
+        "productPrice" : "100",
+        "productDescription" : "The orange is a usually round or oval citrus; its rind and flesh are generally orange, except the varieties of red pulp",
+        "productType" : "fruit",
+        "productImage" : "https://assets.wakefern.com/is/image/wakefern/801956026?$Mi9Product_cell$",
+        "productRating" : 3.8 , 
+        "productQuantity" : "500 G"
+    },
+    {
+        "productId" : "27",
+        "productName" : "Honey",
+        "productPrice" : "100",
+        "productDescription" : "honey, sweet, viscous liquid food, dark golden in colour, produced in the honey sacs of various bees from the nectar of flowers.",
+        "productType" : "bakery",
+        "productImage" : "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=225/app/images/products/sliding_image/16761a.jpg?ts=1628077742",
+        "productRating" : 5 , 
+        "productQuantity" : "100 G"
+    },
+    {
+        "productId" : "28",
+        "productName" : "Amul Cheese",
+        "productPrice" : "200",
+        "productDescription" : "Amul cheese is a hard, canned cheese that tastes like cheddar with a plot twist",
+        "productType" : "dairy",
+        "productImage" : "https://greeno.greensynglobal.com/wp-content/uploads/2020/08/amul-cheese-1-kg.jpg",
+        "productRating" : 4.5 , 
+        "productQuantity" : "10 Pcs"
+    },
+    {
+        "productId" : "29",
+        "productName" : "Corn",
+        "productPrice" : "30",
+        "productDescription" : "Corn is a tall annual cereal grass (Zea mays) that is widely grown for its large elongated ears of starchy seeds",
+        "productType" : "vegetable",
+        "productImage" : "https://tiimg.tistatic.com/fp/1/004/817/high-nutritions-baby-corn-176-w300.jpg",
+        "productRating" : 3 , 
+        "productQuantity" : "1 KG"
+    },
+    {
+        "productId" : "30",
+        "productName" : "Best Milk Toast",
+        "productPrice" : "40",
+        "productDescription" : "Milk toast is a breakfast dish consisting of toasted bread in warm milk, typically with sugar and butter",
+        "productType" : "bakery",
+        "productImage" : "https://m.media-amazon.com/images/I/81L3TILrfwL._SL1500_.jpg",
+        "productRating" : 4 , 
+        "productQuantity" : "250 G"
+    },
+    {
+        "productId" : "31",
+        "productName" : "Apple- Best of Himalaya's",
+        "productPrice" : "100",
+        "productDescription" : "The apple is a pome (fleshy) fruit, in which the ripened ovary and surrounding tissue both become fleshy and edible.",
+        "productType" : "fruit",
+        "productImage" : "https://tiimg.tistatic.com/fp/1/007/521/wholesale-price-100-natural-and-organic-red-fresh-kasmiri-apple-fruit-231-w410.jpg",
+        "productRating" : 4 , 
+        "productQuantity" : "1 KG"
+    },
+    {
+        "productId" : "32",
+        "productName" : "Brown eggs",
+        "productPrice" : "250",
+        "productDescription" : "The Brown eggs are bigger in size and the yolk of the egg is darker than the white variant",
+        "productType" : "Non Vegetable",
+        "productImage" : "https://www.omegafoods.in/upload_product/4243_19052020143359000000_brown_eggs_in_brown_carton__isolated.jpg",
+        "productRating" : 4.9, 
+        "productQuantity" : "6 Pcs"
+    },
+    {
+        "productId" : "33",
+        "productName" : "Sweet fresh stawberry",
+        "productPrice" : "400",
+        "productDescription" : "Sweet fresh stawberry on the wooden table",
+        "productType" : "fruit",
+        "productImage" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsnTGkAdwuXJd3JRFpEPDeuqt3L48Gxijqep9J-59WlUGDSXcfSNRhexIY1dxSWsurT3U&usqp=CAU",
+        "productRating" : 4 , 
+        "productQuantity" : "1 KG"
+    },
+    {
+        "productId" : "34",
+        "productName" : "Homemade bread",
+        "productPrice" : "50",
+        "productDescription" : "Homemade bread is fluffy, tender, and way better than store-bought loaves.",
+        "productType" : "bakery",
+        "productImage" : "https://cdn.shopify.com/s/files/1/1382/5319/products/download_b35f203f-4290-47a6-9e90-93fe2dc7df11_225x225.jpg?v=1635927118",        "productRating" : 5 ,
+        "productQuantity" : "500 G"
+    },
+    {
+        "productId" : "35",
+        "productName" : "Fresh tomato",
+        "productPrice" : "60",
+        "productDescription" : "They are usually red, scarlet, or yellow, though green and purple varieties do exist, and they vary in shape from almost spherical to oval and elongate to pear-shaped.",
+        "productType" : "vegetable",
+        "productImage" : "https://3.imimg.com/data3/HW/PX/MY-13965488/fresh-tomato-250x250.jpg",
+        "productRating" : 5 , 
+        "productQuantity" : "1 KG"
+    },
+    {
+        "productId" : "36",
+        "productName" : "Oranges",
+        "productPrice" : "100",
+        "productDescription" : "The orange is a usually round or oval citrus; its rind and flesh are generally orange, except the varieties of red pulp",
+        "productType" : "fruit",
+        "productImage" : "https://assets.wakefern.com/is/image/wakefern/801956026?$Mi9Product_cell$",
+        "productRating" : 3.8 , 
+        "productQuantity" : "500 G"
+    },
+    {
+        "productId" : "37",
+        "productName" : "Honey",
+        "productPrice" : "100",
+        "productDescription" : "honey, sweet, viscous liquid food, dark golden in colour, produced in the honey sacs of various bees from the nectar of flowers.",
+        "productType" : "bakery",
+        "productImage" : "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=225/app/images/products/sliding_image/16761a.jpg?ts=1628077742",
+        "productRating" : 5 , 
+        "productQuantity" : "100 G"
+    },
+    {
+        "productId" : "38",
+        "productName" : "Amul Cheese",
+        "productPrice" : "200",
+        "productDescription" : "Amul cheese is a hard, canned cheese that tastes like cheddar with a plot twist",
+        "productType" : "dairy",
+        "productImage" : "https://greeno.greensynglobal.com/wp-content/uploads/2020/08/amul-cheese-1-kg.jpg",
+        "productRating" : 4.5 , 
+        "productQuantity" : "10 Pcs"
+    },
+    {
+        "productId" : "39",
+        "productName" : "Corn",
+        "productPrice" : "30",
+        "productDescription" : "Corn is a tall annual cereal grass (Zea mays) that is widely grown for its large elongated ears of starchy seeds",
+        "productType" : "vegetable",
+        "productImage" : "https://tiimg.tistatic.com/fp/1/004/817/high-nutritions-baby-corn-176-w300.jpg",
+        "productRating" : 3 , 
+        "productQuantity" : "1 KG"
+    },
+    {
+        "productId" : "40",
+        "productName" : "Best Milk Toast",
+        "productPrice" : "40",
+        "productDescription" : "Milk toast is a breakfast dish consisting of toasted bread in warm milk, typically with sugar and butter",
+        "productType" : "bakery",
+        "productImage" : "https://m.media-amazon.com/images/I/81L3TILrfwL._SL1500_.jpg",
+        "productRating" : 4 , 
+        "productQuantity" : "250 G"
+    }
+]
+

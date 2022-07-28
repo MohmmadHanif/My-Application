@@ -52,7 +52,7 @@ public class SqliteAddDataActivity extends AppCompatActivity {
                 Log.e("Gender", gender);
 
 
-                if (name.isEmpty() || !name.matches("^[A-Za-z]+$")) {
+                if (name.isEmpty() || !name.matches("^[A-Za-z ]+$")) {
                     nameEdt.setError("Enter Valid Name");
                     nameEdt.requestFocus();
                 } else if (phoneNumber.isEmpty() || phoneNumber.length() < 10 || phoneNumber.length() > 11 || !Patterns.PHONE.matcher(phoneNumber).matches()) {

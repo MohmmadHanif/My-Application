@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 public class DataBaseHelper extends SQLiteOpenHelper {
 
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 3;
     private static final String DB_NAME = "StudentData";
     private static final String TABLE_NAME = "StudentDetail";
     private static final String ID = "id";
@@ -35,7 +35,8 @@ public class DataBaseHelper extends SQLiteOpenHelper {
             + NAME + " TEXT, "
             + PHONE_NUMBER + " TEXT, "
             + EMAIL + " TEXT, "
-            + COURSE_NAME + " TEXT"
+            + COURSE_NAME + " TEXT,"
+            + GENDER + " TEXT"
             + ")";
 
     @Override

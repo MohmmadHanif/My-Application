@@ -15,6 +15,7 @@ import com.example.myapplication.apicalling.getapiwithpagination.modals.MovieLis
 import com.example.myapplication.canvas.CanvasFirstActivity;
 import com.example.myapplication.constraintlayoutandrecycleview.ProductListActivity;
 import com.example.myapplication.R;
+import com.example.myapplication.jsonparsing.JsonParsingMainActivity;
 import com.example.myapplication.room.roomStudentMainActivity;
 import com.example.myapplication.sqlite.SqliteMainActivity;
 
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button apiDemo = findViewById(R.id.apiDemo);
         Button postApiDemo = findViewById(R.id.apiCrudDemo);
         Button apiPagination = findViewById(R.id.apiPagination);
+        Button jsonParsing = findViewById(R.id.jsonParsing);
 
         constraintLayoutDemoBtn.setOnClickListener(this);
         canvasDemoBtn.setOnClickListener(this);
@@ -44,6 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         apiDemo.setOnClickListener(this);
         postApiDemo.setOnClickListener(this);
         apiPagination.setOnClickListener(this);
+        jsonParsing.setOnClickListener(this);
 
     }
 
@@ -67,6 +70,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(new Intent(this, ApiCallingShowDataActivity.class));
         }else if (v.getId() == R.id.apiPagination) {
             startActivity(new Intent(this, MovieMainActivity.class));
+        }else if (v.getId() == R.id.jsonParsing) {
+            startActivity(new Intent(this, JsonParsingMainActivity.class));
         }
     }
 
